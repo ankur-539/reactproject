@@ -1,4 +1,4 @@
-function Registorform() {
+function Registerform() {
     return (
         <div className="design">
             <h1>Student Application Form</h1>
@@ -39,4 +39,4 @@ function Registorform() {
         </div>
     )
 }
-export default Registorform;
+export default Registerform;
