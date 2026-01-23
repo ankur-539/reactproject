@@ -26,7 +26,7 @@ function Appsidebar() {
             <div class="collapse collapse-horizontal w-75" id="collapseWidthExample">
               <div class="card card-body rounded-0 hight c-bg-4 gap-3">
                 <p className='m-0 fw-bold fm text-light fs-4 fw-bold'>AppName</p>
-                <hr className='w-100 m-0 mb-1'></hr>
+                <hr className='w-100 m-0 mb-1 text-light'></hr>
                 <p className='m-0 fw-bold fm text-light abc'>Dashboard</p>
                 <p className='m-0 fw-bold fm text-light abc'>Team</p>
                 <p className='m-0 fw-bold fm text-light abc'>Project</p>

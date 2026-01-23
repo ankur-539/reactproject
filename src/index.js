@@ -8,10 +8,11 @@ import Userlogin from './apps/modules/users/auth/Userlogin';
 import UserRegistor from './apps/modules/users/auth/UserRegistor';
 import "./apps/assets/global.css";
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-// import Applandingpage from './apps/modules/dashboard/Applandingpage';
-// import Appfooter from './apps/modules/sharecomponents/Appfooter';
+import Applandingpage from './apps/modules/dashboard/Applandingpage';
+import Appfooter from './apps/modules/sharecomponents/Appfooter';
 import Apperror from './apps/modules/sharecomponents/Apperror';
 import Appsidebar from './apps/modules/sharecomponents/Appsidebar';
+import Appheader from './apps/modules/sharecomponents/Appheader';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,7 +24,7 @@ root.render(
         <Route path='usermanagement' element={<Userlogin></Userlogin>} />
         <Route path='usermanagement/signup' element={<UserRegistor></UserRegistor>} />
         <Route path='usermanagement/signup/login' element={<Userlogin></Userlogin>} />
-        <Route path='dashboard' element={<Appsidebar></Appsidebar>}/>
+        <Route path='dashboard' element={<Appheader></Appheader>}/>
 
 
 
