@@ -4,12 +4,15 @@
 .c-bg-1{
     background-color: #101828;
 }
-/* .c-wid{
-    width: 25rem;
+.c-bg-2{
+    background-color: #0E1624;
 }
-.c-widd{
-    width: 35rem;
-} */
+.c-bg-3{
+    background-color:cornflowerblue;
+}
+.c-bg-4{
+    background-color:rgba(100, 148, 237, 0.753);
+}
 .hightt{
     width: 100vw;
     height: 100vh !important;
@@ -25,6 +28,24 @@
 }
 .bg-image{
     background-image: url("/src/apps/assets/images/bg1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.bg-image-2{
+    background-image: url("/src/apps/assets/images/bg2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.bg-image-3{
+    background-image: url("/src/apps/assets/images/bg3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.bg-image-4{
+    background-image: url("/src/apps/assets/images/bg4.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -45,14 +66,24 @@
 .hight{
     height: 100vh;
 }
+.hight-1{
+    height: 82vh;
+}
+.hight-2{
+    height: 9vh;
+}
+.hight-3{
+    height: 9vh;
+}
+.hight-4{
+    height: 27vh;
+}
+.w-h{
+    width: 100%;
+    height: 100%;
+}
 .width{
     width: 60px;
-}
-.c-bg-3{
-    background-color:cornflowerblue;
-}
-.c-bg-4{
-    background-color:rgba(100, 148, 237, 0.753);
 }
 .abc{
     scale: 0.9;
@@ -76,7 +107,4 @@
 .c-pointer:hover{
     cursor: pointer;
     opacity: 100% !important;
-}
-.mtt{
-    margin-top: 85vh;
 }

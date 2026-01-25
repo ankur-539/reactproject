@@ -7,9 +7,9 @@ function Appheader() {
       <div className="row">
         <div className="col-md-2"></div>
         <div className="col-md-10 shadow d-flex align-items-center px-4 py-3 c-bg-4 text-white rounded">
-          <FaSearch></FaSearch>
-          <input class="form-control border-0 w-50 ms-3" type="search" placeholder="Search" aria-label="Search" />
-          <FaRegBell className='ms-auto me-4 c-pointer'></FaRegBell>
+          <FaSearch className='fs-5'></FaSearch>
+          <input class="form-control border-0 w-50 mx-3" type="search" placeholder="Search" aria-label="Search" />
+          <FaRegBell className='ms-auto me-4 c-pointer fs-4'></FaRegBell>
           <div className='pro me-3'></div>
           <div class="dropdown text-white">
             <div class="dropdown-toggle c-pointer" data-bs-toggle="dropdown" aria-expanded="false">UserName</div>

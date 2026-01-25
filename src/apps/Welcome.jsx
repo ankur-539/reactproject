@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 export default function Welcome() {
     return (
-        <div className='container'>
+        <div className='container hight'>
             <div className='row'>
                 <div className="col-sm-12">
                     <h1 className='text-center p-5 fw-bold'>List Of Modules</h1>
