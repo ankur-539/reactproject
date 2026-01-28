@@ -23,8 +23,7 @@ function Applandingpage() {
           <div className="hight width px-2 d-flex flex-column align-items-center gap-4 py-3 c-bg-3 text-white shadow">
             <VscLayoutSidebarLeft className="fs-3" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
               aria-expanded="false" aria-controls="collapseWidthExample" />
-            <hr className="w-100 m-0">
-            </hr>
+            <hr className="w-100 m-0" />
             <FaHome></FaHome>
             <RiTeamFill></RiTeamFill>
             <FaFolderClosed></FaFolderClosed>
@@ -49,10 +48,11 @@ function Applandingpage() {
             </div>
           </div>
         </div>
+
         <div className="col-1 g-0 flex-grow-1">
           <div className=" shadow d-flex align-items-center px-4 py-3 c-bg-4 text-white hight-3">
             <FaSearch className='fs-5'></FaSearch>
-            <input class="form-control border-0 w-50 mx-3" type="search" placeholder="Search" aria-label="Search" />
+            <input class="form-control border-0 w-50 mx-3 " type="search" placeholder="Search" aria-label="Search" />
             <FaRegBell className='ms-auto me-4 c-pointer fs-4'></FaRegBell>
             <div className='pro me-3'></div>
             <div class="dropdown text-white">
@@ -69,19 +69,35 @@ function Applandingpage() {
             {/* <div className="fs-3 fw-bold fm ps-3">Dashboard<hr className="m-0 p-0"></hr></div> */}
             <div class="container-fluid text-center">
               <div class="row pt-2">
-                <div class="col hight-4 c-bg-5 g-0 p-2 pt-3 ps-3"><div className="border bg-white rounded-4 w-h"></div></div>
-                <div class="col hight-4 c-bg-5 g-0 p-2 pt-3"><div className="border bg-white rounded-4 w-h"></div></div>
-                <div class="col hight-4 c-bg-5 g-0 p-2 pt-3"><div className="border bg-white rounded-4 w-h"></div></div>
-                <div class="col hight-4 c-bg-5 g-0 p-2 pt-3 pe-3"><div className="border bg-white rounded-4 w-h"></div></div>
+                <div class="col hight-5 c-bg-5 g-0 p-2 pt-3 ps-3">
+                  <div className="border bg-white rounded-4 w-h">
+
+                  </div>
+                </div>
+                <div class="col hight-5 c-bg-5 g-0 p-2 pt-3">
+                  <div className="border bg-white rounded-4 w-h">
+
+                  </div>
+                </div>
+                <div class="col hight-5 c-bg-5 g-0 p-2 pt-3">
+                  <div className="border bg-white rounded-4 w-h">
+
+                  </div>
+                </div>
+                <div class="col hight-5 c-bg-5 g-0 p-2 pt-3 pe-3">
+                  <div className="border bg-white rounded-4 w-h">
+
+                  </div>
+                </div>
               </div>
               <div class="row">
                 <div class="col-9 hight-4 c-bg-5 g-0 p-2 ps-3"><div className="border bg-white rounded-4 w-h"></div></div>
                 <div class="col-3 hight-4 c-bg-5 g-0 p-2 pe-3"><div className="border bg-white rounded-4 w-h"></div></div>
               </div>
               <div class="row">
-                <div class="col-6 hight-4 c-bg-5 g-0 p-2 pb-3 ps-3"><div className="border bg-white rounded-4 w-h"></div></div>
-                <div class="col-3 hight-4 c-bg-5 g-0 p-2 pb-3"><div className="border bg-white rounded-4 w-h"></div></div>
-                <div class="col-3 hight-4 c-bg-5 g-0 p-2 pb-3 pe-3"><div className="border bg-white rounded-4 w-h"></div></div>
+                <div class="col-6 hight-5 c-bg-5 g-0 p-2 pb-3 ps-3"><div className="border bg-white rounded-4 w-h"></div></div>
+                <div class="col-3 hight-5 c-bg-5 g-0 p-2 pb-3"><div className="border bg-white rounded-4 w-h"></div></div>
+                <div class="col-3 hight-5 c-bg-5 g-0 p-2 pb-3 pe-3"><div className="border bg-white rounded-4 w-h"></div></div>
               </div>
             </div>
           </div>

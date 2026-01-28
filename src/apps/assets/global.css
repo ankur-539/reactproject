@@ -76,7 +76,10 @@
     height: 9vh;
 }
 .hight-4{
-    height: 27vh;
+    height: 35vh;
+}
+.hight-5{
+    height: 23vh;
 }
 .w-h{
     width: 100%;
@@ -107,4 +110,14 @@
 .c-pointer:hover{
     cursor: pointer;
     opacity: 100% !important;
+}
+
+.chover{
+    transition-duration: 500ms;
+}
+.chover:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 500ms;
+    box-shadow: 0 0 10px black !important;
+    border: none !important;
 }

@@ -18,8 +18,8 @@ export default function Welcome() {
             </div>
             <div className="row">
                 {fakedata.map((e) => {
-                    return (<div className='col-sm-3 mt-3'>
-                        <Link to ={e.routing} className={`card border p-4 text-center shadow text-decoration-none ${e.themes}`}>
+                    return (<div className='col-sm-3 mt-3 '>
+                        <Link to ={e.routing} className={`card border p-4 text-center shadow text-decoration-none chover ${e.themes}`}>
                             <h1><FcBusinessman/></h1>
                             <h5 className='fw-bold'>{e.name}</h5>
                         </Link>
