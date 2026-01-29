@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { toast, ToastContainer } from 'react-toastify';
 
 export default function UserRegistor() {
-
+    const nav = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
 
     const HideAndShow = (e) => {
@@ -14,10 +15,17 @@ export default function UserRegistor() {
 
     const formsubmit = (data) => {
         console.log(data);
+        toast.success("new account created successfully", { autoClose: 5000 });
+        setTimeout(() => {
+            nav("/usermanagement")
+        }, 5000)
     }
+
+
     return (
         <form onSubmit={handleSubmit(formsubmit)}>
             <div className="container-fluid">
+                <ToastContainer />
                 <div className="row">
                     <div className="col-md-12 d-flex justify-content-center align-items-center hightt flex-column bg-image">
                         <h2 className='mb-4 fw-bold c-font-gr'>Create an account</h2>
@@ -45,10 +53,11 @@ export default function UserRegistor() {
                                 </div>
                                 <div className="w-50">
                                     <label className="form-label text-light">Phone no</label>
-                                    <input type="tel" className="form-control" {...register("userphone", { required: true, minLength: 10, maxLength: 10 })} />
+                                    <input type="tel" className="form-control" {...register("userphone", { required: true, minLength: 10, maxLength: 10 ,pattern:/^[0-9]\d{9}$/})} />
                                     {errors.userphone?.type === "required" && <p className='text-danger m-0'>phone no is required</p>}
                                     {errors.userphone?.type === "minLength" && <p className='text-info m-0'>minimum 10 digit required</p>}
                                     {errors.userphone?.type === "maxLength" && <p className='text-info m-0'>maximum 10 digit required</p>}
+                                    {errors.userphone?.type === "pattern" && <p className='text-warning m-0'>only digits are allowed</p>}
                                 </div>
                             </div>
                             <div className='d-flex justify-content-between gap-3 mb-3'>
