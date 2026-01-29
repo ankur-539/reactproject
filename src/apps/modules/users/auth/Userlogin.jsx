@@ -24,7 +24,7 @@ function Userlogin() {
         else{
             toast.success("Welcome to dashboard",{autoClose:2000});
             setTimeout(()=>{
-                nav("/dashboard")
+                nav("/usermanagement/dashboard")
             },2000)
         }
     }
@@ -40,28 +40,28 @@ function Userlogin() {
                 <div className="col-md-12 full-wid d-flex justify-content-center align-items-center hightt flex-column bg-image">
                     <h3 className='mb-4 fw-bold c-font-gr'>Sign in your account</h3>
                     <div className='col-md-4 border c-wid p-5 border-0 c-shadow rounded fm back'>
-                            <div class="mb-3">
-                                <label class="form-label">Email address</label>
-                                <input type="email" class="form-control" value={email} onInput={changeEmail}/>
+                            <div className="mb-3">
+                                <label className="form-label">Email address</label>
+                                <input type="email" className="form-control" value={email} onInput={changeEmail}/>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Password</label>
-                                <input type={showPassword ? "text" : "password"} class="form-control" value={pass} onInput={changePass} />
+                            <div className="mb-3">
+                                <label className="form-label">Password</label>
+                                <input type={showPassword ? "text" : "password"} className="form-control" value={pass} onInput={changePass} />
                             </div>
-                            <div class="mb-3 form-check d-flex gap-2">
-                                <input type="checkbox" class="form-check-input" onChange={HideAndShow} />
-                                <label class="form-check-label">Show Password</label>
+                            <div className="mb-3 form-check d-flex gap-2">
+                                <input type="checkbox" className="form-check-input" onChange={HideAndShow} />
+                                <label className="form-check-label">Show Password</label>
                                 <p className='ms-auto fw-medium text-info cursor '>Forgot Password</p>
                             </div>
-                            <button type="submit" class="btn w-100 btn-primary" onClick={Loginformsubmit}>Login</button>
+                            <button type="submit" className="btn w-100 btn-primary" onClick={Loginformsubmit}>Login</button>
                         <div className='d-flex justify-content-center mt-4'>
                             <hr className='w-50'/>
                             <p className='px-3'>Or</p>
                             <hr className='w-50'/>
                         </div>
                         <div className='d-flex justify-content-between gap-3'>
-                            <button type="button" class="btn btn-light bg-white border w-50 d-flex justify-content-center align-items-center gap-2"><FcGoogle className='fs-5' />Google</button>
-                            <button type="button" class="btn btn-light bg-white border w-50 d-flex justify-content-center align-items-center gap-2"><FaGithub className='fs-5' />GitHub</button>
+                            <button type="button" className="btn btn-light bg-white border w-50 d-flex justify-content-center align-items-center gap-2"><FcGoogle className='fs-5' />Google</button>
+                            <button type="button" className="btn btn-light bg-white border w-50 d-flex justify-content-center align-items-center gap-2"><FaGithub className='fs-5' />GitHub</button>
                         </div>
                     </div>
                     <div className='d-flex gap-2 justify-content-center mt-4'>
