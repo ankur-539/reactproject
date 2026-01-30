@@ -47,13 +47,13 @@ export default function UserRegistor() {
                             <div className='d-flex justify-content-between gap-3 mb-3'>
                                 <div className="w-50">
                                     <label className="form-label">Email address</label>
-                                    <input type="email" className="form-control" {...register("emailid", { required: true, pattern: /^(?!\.)(?!.*\.\.)[a-zA-Z0-9.]{5,15}(?<!\.)@gmail\.com$/ })} />
+                                    <input type="email" className="form-control" {...register("emailid", { required: true, pattern: /^(?!\.)(?!.*\.\.)[a-zA-Z0-9.]{3,15}(?<!\.)@gmail\.com$/ })} />
                                     {errors.emailid?.type === "required" && <p className='text-danger m-0'>email is required</p>}
-                                    {errors.emailid?.type === "pattern" && <p className='text-danger m-0'>email valid gmail</p>}
+                                    {errors.emailid?.type === "pattern" && <p className='text-danger m-0'>enter valid gmail</p>}
                                 </div>
                                 <div className="w-50">
                                     <label className="form-label text-light">Phone no</label>
-                                    <input type="tel" className="form-control" {...register("userphone", { required: true, minLength: 10, maxLength: 10 ,pattern:/^[0-9]\d{9}$/})} />
+                                    <input type="tel" className="form-control" {...register("userphone", { required: true, minLength: 10, maxLength: 10, pattern: /^[0-9]\d{9}$/ })} />
                                     {errors.userphone?.type === "required" && <p className='text-danger m-0'>phone no is required</p>}
                                     {errors.userphone?.type === "minLength" && <p className='text-info m-0'>minimum 10 digit required</p>}
                                     {errors.userphone?.type === "maxLength" && <p className='text-info m-0'>maximum 10 digit required</p>}
@@ -80,7 +80,7 @@ export default function UserRegistor() {
                                 <label className="form-check-label">Show Password</label>
                             </div>
 
-                            <button type="submit" className="btn w-100 btn-success mt-3">Sign up</button>
+                            <input type="submit" className="btn w-100 btn-success mt-3" ></input>
                         </div>
 
 
