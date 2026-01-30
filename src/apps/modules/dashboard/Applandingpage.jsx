@@ -34,8 +34,8 @@ function Applandingpage() {
             <AiFillSetting className="mt-auto mb-2 fs-5"></AiFillSetting>
           </div>
 
-          <div class="collapse collapse-horizontal w-75" id="collapseWidthExample">
-            <div class="card card-body rounded-0 border-0 hight c-bg-4 gap-3">
+          <div className="collapse collapse-horizontal w-75" id="collapseWidthExample">
+            <div className="card card-body rounded-0 border-0 hight c-bg-4 gap-3">
               <p className="m-0 fw-bold fm text-light fs-4 fw-bold">AppName</p>
               <hr className="w-100 m-0 mb-1 text-light">
               </hr>
@@ -44,7 +44,7 @@ function Applandingpage() {
               <p className="m-0 fw-bold fm text-light abc">Project</p>
               <p className="m-0 fw-bold fm text-light abc">Calendar</p>
               <p className="m-0 fw-bold fm text-light abc">Report</p>
-              <button type="button" class="btn btn-outline-light m-0 mt-auto">
+              <button type="button" className="btn btn-outline-light m-0 mt-auto">
                 + add new entry
               </button>
             </div>
@@ -56,14 +56,14 @@ function Applandingpage() {
           {/**************start search bar*******************/}
           <div className=" shadow d-flex align-items-center px-4 py-3 c-bg-4 text-white hight-3">
             <FaSearch className='fs-5'></FaSearch>
-            <input class="form-control border-0 w-50 mx-3 " type="search" placeholder="Search" aria-label="Search" />
+            <input className="form-control border-0 w-50 mx-3 " type="search" placeholder="Search" aria-label="Search" />
             <FaRegBell className='ms-auto me-4 c-pointer fs-4'></FaRegBell>
             <div className='pro me-3'></div>
-            <div class="dropdown text-white">
-              <div class="dropdown-toggle c-pointer" data-bs-toggle="dropdown" aria-expanded="false">UserName</div>
-              <ul class="dropdown-menu mt-3">
-                <li><Link to="" class="dropdown-item" href="#">User profile</Link></li>
-                <li><Link to="" class="dropdown-item" href="#">Sign out</Link></li>
+            <div className="dropdown text-white">
+              <div className="dropdown-toggle c-pointer" data-bs-toggle="dropdown" aria-expanded="false">UserName</div>
+              <ul className="dropdown-menu mt-3">
+                <li><Link to="" className="dropdown-item" href="#">User profile</Link></li>
+                <li><Link to="" className="dropdown-item" href="#">Sign out</Link></li>
               </ul>
             </div>
           </div>
@@ -74,64 +74,64 @@ function Applandingpage() {
           <div className="container-fluid hight-1 bg-info overflow-y-auto">
             <div className="row mt-3">
               <div className="col-md-3">
-                <div class="card text-center mb-3 hight-5">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-5">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="col-md-3">
-                <div class="card text-center mb-3 hight-5">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-5">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="col-md-3">
-                <div class="card text-center mb-3 hight-5">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-5">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="col-md-3">
-                <div class="card text-center mb-3 hight-5">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-5">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="col-md-8">
-                <div class="card text-center mb-3 hight-4">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-4">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="col-md-4">
-                <div class="card text-center mb-3 hight-4">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-4">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="col-md-6">
-                <div class="card text-center mb-3 hight-6">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-6">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="col-md-3">
-                <div class="card text-center mb-3 hight-6">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-6">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="col-md-3">
-                <div class="card text-center mb-3 hight-6">
-                  <div class="card-body">
+                <div className="card text-center mb-3 hight-6">
+                  <div className="card-body">
 
                   </div>
                 </div>
