@@ -17,8 +17,9 @@ import { Link } from "react-router-dom";
 import Userdashboard from "./Userdashboard";
 import Project from "./Project";
 import Team from "./Team";
-import Report from "./Report"
-import Calender from "./Calender"
+import Report from "./Report";
+import Calender from "./Contact";
+import Contact from "./Contact";
 
 
 
@@ -29,8 +30,8 @@ function Applandingpage() {
   const rendercontent = ()=> {
     if(activePage === "Dashboard") return <Userdashboard></Userdashboard>;
     if(activePage === "Team") return <Team></Team>;
+    if(activePage === "Contact") return <Contact></Contact>;
     if(activePage === "Project") return <Project></Project>;
-    if(activePage === "Contact") return <Calender></Calender>;
     if(activePage === "Report") return <Report></Report>;
    
   }

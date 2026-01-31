@@ -1,5 +1,5 @@
 
-function Calender() {
+function Contact() {
   return (
     <div className='row bg-light '>
       <div className="col-md-6 fm p-5 bg-info-subtle">
@@ -21,4 +21,4 @@ function Calender() {
   )
 }
 
-export default Calender
+export default Contact
