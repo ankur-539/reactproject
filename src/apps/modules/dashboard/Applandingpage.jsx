@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { VscLayoutSidebarLeft } from "react-icons/vsc";
 import { FaHome } from "react-icons/fa";
 import { FaFolderClosed } from "react-icons/fa6";
@@ -14,9 +14,27 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { ImGithub } from "react-icons/im";
 import { FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Userdashboard from "./Userdashboard";
+import Project from "./Project";
+import Team from "./Team";
+import Report from "./Report"
+import Calender from "./Calender"
+
 
 
 function Applandingpage() {
+
+  const [activePage,setActivePage] = useState("Dashboard");
+
+  const rendercontent = ()=> {
+    if(activePage === "Dashboard") return <Userdashboard></Userdashboard>;
+    else if(activePage === "Team") return <Team></Team>;
+    else if(activePage === "Project") return <Project></Project>;
+    else if(activePage === "Calender") return <Calender></Calender>;
+    else if(activePage === "Report") return <Report></Report>;
+    else;
+  }
+
   return (
     <div className="container-fluid overflow-hidden">
       <div className="row d-flex ">
@@ -26,11 +44,11 @@ function Applandingpage() {
             <VscLayoutSidebarLeft className="fs-3" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
               aria-expanded="false" aria-controls="collapseWidthExample" />
             <hr className="w-100 m-0" />
-            <FaHome></FaHome>
-            <RiTeamFill></RiTeamFill>
-            <FaFolderClosed></FaFolderClosed>
-            <IoCalendarNumber></IoCalendarNumber>
-            <FaChartPie></FaChartPie>
+            <FaHome className="my-1" onClick={()=>{setActivePage("Dashboard")}}></FaHome>
+            <RiTeamFill className="my-1" onClick={()=>{setActivePage("Team")}}></RiTeamFill>
+            <FaFolderClosed className="my-1" onClick={()=>{setActivePage("Project")}}></FaFolderClosed>
+            <IoCalendarNumber className="my-1" onClick={()=>{setActivePage("Calender")}}></IoCalendarNumber>
+            <FaChartPie className="my-1" onClick={()=>{setActivePage("Report")}}></FaChartPie>
             <AiFillSetting className="mt-auto mb-2 fs-5"></AiFillSetting>
           </div>
 
@@ -39,14 +57,14 @@ function Applandingpage() {
               <p className="m-0 fw-bold fm text-light fs-4 fw-bold">AppName</p>
               <hr className="w-100 m-0 mb-1 text-light">
               </hr>
-              <p className="m-0 fw-bold fm text-light abc">Dashboard</p>
-              <p className="m-0 fw-bold fm text-light abc">Team</p>
-              <p className="m-0 fw-bold fm text-light abc">Project</p>
-              <p className="m-0 fw-bold fm text-light abc">Calendar</p>
-              <p className="m-0 fw-bold fm text-light abc">Report</p>
-              <button type="button" className="btn btn-outline-light m-0 mt-auto">
+              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Dashboard")}}>Dashboard</p>
+              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Team")}}>Team</p>
+              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Project")}}>Project</p>
+              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Calender")}}>Calendar</p>
+              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Report")}}>Report</p>
+              <p type="button" className="btn btn-outline-light m-0 mt-auto">
                 + add new entry
-              </button>
+              </p>
             </div>
           </div>
         </div>
@@ -58,7 +76,7 @@ function Applandingpage() {
             <FaSearch className='fs-5'></FaSearch>
             <input className="form-control border-0 w-50 mx-3 " type="search" placeholder="Search" aria-label="Search" />
             <FaRegBell className='ms-auto me-4 c-pointer fs-4'></FaRegBell>
-            <div className='pro me-3'></div>
+            <div className='pro me-3 p-3'></div>
             <div className="dropdown text-white">
               <div className="dropdown-toggle c-pointer" data-bs-toggle="dropdown" aria-expanded="false">UserName</div>
               <ul className="dropdown-menu mt-3">
@@ -72,76 +90,12 @@ function Applandingpage() {
           {/**************start containt area*******************/}
 
           <div className="container-fluid hight-1 bg-info overflow-y-auto">
-            <div className="row mt-3">
-              <div className="col-md-3">
-                <div className="card text-center mb-3 hight-5">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="card text-center mb-3 hight-5">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="card text-center mb-3 hight-5">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="card text-center mb-3 hight-5">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-8">
-                <div className="card text-center mb-3 hight-4">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card text-center mb-3 hight-4">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="card text-center mb-3 hight-6">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="card text-center mb-3 hight-6">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="card text-center mb-3 hight-6">
-                  <div className="card-body">
-
-                  </div>
-                </div>
-              </div>
-            </div>
+            {rendercontent()}
           </div>
           {/**************end containt area*******************/}
 
           {/**************start footer*******************/}
-          <div className="c-bg-4 text-light shadow d-flex align-items-center gap-4 p-4 hight-2">
+          <div className="c-bg-4 text-light shadow d-flex align-items-center gap-4 p-4 hight-2 ">
             <div>©Company</div>
             <IoLogoFacebook className='ms-auto fs-5 c-pointer opacity-75'></IoLogoFacebook>
             <IoLogoInstagram className='fs-5 c-pointer opacity-75'></IoLogoInstagram>

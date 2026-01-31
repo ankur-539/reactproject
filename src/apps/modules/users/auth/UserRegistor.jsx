@@ -11,7 +11,7 @@ export default function UserRegistor() {
         setShowPassword(e.target.checked)
     }
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const formsubmit = (data) => {
         console.log(data);
