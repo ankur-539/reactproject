@@ -28,11 +28,11 @@ function Applandingpage() {
 
   const rendercontent = ()=> {
     if(activePage === "Dashboard") return <Userdashboard></Userdashboard>;
-    else if(activePage === "Team") return <Team></Team>;
-    else if(activePage === "Project") return <Project></Project>;
-    else if(activePage === "Calender") return <Calender></Calender>;
-    else if(activePage === "Report") return <Report></Report>;
-    else;
+    if(activePage === "Team") return <Team></Team>;
+    if(activePage === "Project") return <Project></Project>;
+    if(activePage === "Calender") return <Calender></Calender>;
+    if(activePage === "Report") return <Report></Report>;
+   
   }
 
   return (
