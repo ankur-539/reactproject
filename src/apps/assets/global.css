@@ -50,12 +50,6 @@
     background-position: center;
     background-size:cover;
 }
-.bg-image-5{
-    background-image: url("/src/apps/assets/images/home1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-}
 .back{
     background-color: transparent;
     backdrop-filter: blur(20px);

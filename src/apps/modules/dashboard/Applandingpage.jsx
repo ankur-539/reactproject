@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { VscLayoutSidebarLeft } from "react-icons/vsc";
-import { FaHome } from "react-icons/fa";
 import { FaFolderClosed } from "react-icons/fa6";
-import { IoCalendarNumber } from "react-icons/io5";
 import { RiTeamFill } from "react-icons/ri";
 import { FaChartPie } from "react-icons/fa";
 import { AiFillSetting } from "react-icons/ai";
@@ -10,9 +8,11 @@ import { FaSearch } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io";
+import { MdDashboard } from "react-icons/md";
 import { RiTwitterXLine } from "react-icons/ri";
 import { ImGithub } from "react-icons/im";
 import { FaYoutube } from "react-icons/fa6";
+import { MdContacts } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Userdashboard from "./Userdashboard";
 import Project from "./Project";
@@ -30,7 +30,7 @@ function Applandingpage() {
     if(activePage === "Dashboard") return <Userdashboard></Userdashboard>;
     if(activePage === "Team") return <Team></Team>;
     if(activePage === "Project") return <Project></Project>;
-    if(activePage === "Calender") return <Calender></Calender>;
+    if(activePage === "Contact") return <Calender></Calender>;
     if(activePage === "Report") return <Report></Report>;
    
   }
@@ -44,10 +44,10 @@ function Applandingpage() {
             <VscLayoutSidebarLeft className="fs-3" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
               aria-expanded="false" aria-controls="collapseWidthExample" />
             <hr className="w-100 m-0" />
-            <FaHome className="my-1" onClick={()=>{setActivePage("Dashboard")}}></FaHome>
+            <MdDashboard className="my-1" onClick={()=>{setActivePage("Dashboard")}}></MdDashboard>
+            <MdContacts className="my-1" onClick={()=>{setActivePage("Contact")}}></MdContacts>
             <RiTeamFill className="my-1" onClick={()=>{setActivePage("Team")}}></RiTeamFill>
             <FaFolderClosed className="my-1" onClick={()=>{setActivePage("Project")}}></FaFolderClosed>
-            <IoCalendarNumber className="my-1" onClick={()=>{setActivePage("Calender")}}></IoCalendarNumber>
             <FaChartPie className="my-1" onClick={()=>{setActivePage("Report")}}></FaChartPie>
             <AiFillSetting className="mt-auto mb-2 fs-5"></AiFillSetting>
           </div>
@@ -58,9 +58,9 @@ function Applandingpage() {
               <hr className="w-100 m-0 mb-1 text-light">
               </hr>
               <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Dashboard")}}>Dashboard</p>
-              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Team")}}>Team</p>
+              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Contact")}}>Contact</p>
+              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Team")}}>About</p>
               <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Project")}}>Project</p>
-              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Calender")}}>Calendar</p>
               <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Report")}}>Report</p>
               <p type="button" className="btn btn-outline-light m-0 mt-auto">
                 + add new entry
@@ -81,7 +81,7 @@ function Applandingpage() {
               <div className="dropdown-toggle c-pointer" data-bs-toggle="dropdown" aria-expanded="false">UserName</div>
               <ul className="dropdown-menu mt-3">
                 <li><Link to="" className="dropdown-item" href="#">User profile</Link></li>
-                <li><Link to="" className="dropdown-item" href="#">Sign out</Link></li>
+                <li><Link to="/usermanagement" className="dropdown-item" href="#">Sign out</Link></li>
               </ul>
             </div>
           </div>
