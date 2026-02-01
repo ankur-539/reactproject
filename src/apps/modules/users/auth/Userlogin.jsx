@@ -33,13 +33,15 @@ function Userlogin() {
                         <div className='col-md-4 border c-wid p-5 border-0 c-shadow rounded fm back'>
                             <div className="mb-3">
                                 <label className="form-label">Email address</label>
-                                <input type="email" className="form-control" {...register("emailid",{required:true})}/>
-                                {errors.emailid && <p className='text-danger'>email is required</p>}
+                                <input type="email" className="form-control" {...register("emailid",{required:true,pattern:/^[a-zA-Z0-9](\.?[a-zA-Z0-9]){5,29}@gmail\.com$/})}/>
+                                {errors.emailid?.type ==="required" && <p className='text-danger'>email is required</p>}
+                                {errors.emailid?.type ==="pattern" && <p className='text-warning'>invalid email</p>}
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Password</label>
-                                <input type={showPassword ? "text" : "password"} className="form-control" {...register("pass",{required:true})} />
-                                {errors.emailid && <p className='text-danger'>pass is required</p>}
+                                <input type={showPassword ? "text" : "password"} className="form-control" {...register("pass",{required:true,minLength:6})} />
+                                {errors.pass?.type === "required" && <p className='text-danger'>pass is required</p>}
+                                {errors.pass?.type === "minLength" && <p className='text-warning'>minimum 6 character</p>}
                             </div>
                             <div className="mb-3 form-check d-flex gap-2">
                                 <input type="checkbox" className="form-check-input" onChange={HideAndShow} />
