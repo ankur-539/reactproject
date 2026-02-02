@@ -16,7 +16,7 @@ import { MdContacts } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Userdashboard from "./Userdashboard";
 import Project from "./Project";
-import Team from "./Team";
+import Team from "./About";
 import Report from "./Report";
 import Contact from "./Contact";
 

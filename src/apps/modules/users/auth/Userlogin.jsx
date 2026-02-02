@@ -28,12 +28,12 @@ function Userlogin() {
             <div className="container-fluid">
                 <ToastContainer/>
                 <div className="row">
-                    <div className="col-md-12 full-wid d-flex justify-content-center align-items-center hightt flex-column bg-image">
+                    <div className="col-md-12 full-wid d-flex justify-content-center align-items-center hightt flex-column bg-image p-5">
                         <h3 className='mb-4 fw-bold c-font-gr'>Sign in your account</h3>
                         <div className='col-md-4 border c-wid p-5 border-0 c-shadow rounded fm back'>
                             <div className="mb-3">
                                 <label className="form-label">Email address</label>
-                                <input type="email" className="form-control" {...register("emailid",{required:true,pattern:/^[a-zA-Z0-9](\.?[a-zA-Z0-9]){5,29}@gmail\.com$/})}/>
+                                <input type="email" className="form-control" {...register("emailid",{required:true,pattern:/^[a-zA-Z0-9](\.?[a-zA-Z0-9]){2,29}@gmail\.com$/})}/>
                                 {errors.emailid?.type ==="required" && <p className='text-danger'>email is required</p>}
                                 {errors.emailid?.type ==="pattern" && <p className='text-warning'>invalid email</p>}
                             </div>

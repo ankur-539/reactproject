@@ -79,7 +79,6 @@ export default function UserRegistor() {
                                 <input type="checkbox" className="form-check-input" onChange={HideAndShow} />
                                 <label className="form-check-label">Show Password</label>
                             </div>
-
                             <input type="submit" className="btn w-100 btn-success mt-3" ></input>
                         </div>
 
