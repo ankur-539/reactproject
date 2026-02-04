@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import { VscLayoutSidebarLeft } from "react-icons/vsc";
 import { FaFolderClosed } from "react-icons/fa6";
 import { RiTeamFill } from "react-icons/ri";
@@ -13,27 +13,14 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { ImGithub } from "react-icons/im";
 import { FaYoutube } from "react-icons/fa6";
 import { MdContacts } from "react-icons/md";
-import { Link } from "react-router-dom";
-import Userdashboard from "./Userdashboard";
-import Project from "./Project";
-import Team from "./About";
-import Report from "./Report";
-import Contact from "./Contact";
+import { Link, Outlet } from "react-router-dom";
+
 
 
 
 function Applandingpage() {
 
-  const [activePage,setActivePage] = useState("Dashboard");
 
-  const rendercontent = ()=> {
-    if(activePage === "Dashboard") return <Userdashboard></Userdashboard>;
-    if(activePage === "Team") return <Team></Team>;
-    if(activePage === "Contact") return <Contact></Contact>;
-    if(activePage === "Project") return <Project></Project>;
-    if(activePage === "Report") return <Report></Report>;
-   
-  }
 
   return (
     <div className="container-fluid overflow-hidden">
@@ -44,12 +31,12 @@ function Applandingpage() {
             <VscLayoutSidebarLeft className="fs-3" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
               aria-expanded="false" aria-controls="collapseWidthExample" />
             <hr className="w-100 m-0" />
-            <MdDashboard className="my-1" onClick={()=>{setActivePage("Dashboard")}}></MdDashboard>
-            <MdContacts className="my-1" onClick={()=>{setActivePage("Contact")}}></MdContacts>
-            <RiTeamFill className="my-1" onClick={()=>{setActivePage("Team")}}></RiTeamFill>
-            <FaFolderClosed className="my-1" onClick={()=>{setActivePage("Project")}}></FaFolderClosed>
-            <FaChartPie className="my-1" onClick={()=>{setActivePage("Report")}}></FaChartPie>
-            <AiFillSetting className="mt-auto mb-2 fs-5"></AiFillSetting>
+            <Link to={""} className="text-white"><MdDashboard></MdDashboard></Link>
+            <Link to={"contact"} className="text-white"><MdContacts></MdContacts></Link>
+            <Link to={"about"} className="text-white"><RiTeamFill></RiTeamFill></Link>
+            <Link to={"project"} className="text-white"><FaFolderClosed></FaFolderClosed></Link>
+            <Link to={"report"} className="text-white"><FaChartPie></FaChartPie></Link>
+            <Link to={"setting"} className="text-white mt-auto mb-2 fs-5"><AiFillSetting></AiFillSetting></Link>
           </div>
 
           <div className="collapse collapse-horizontal w-75" id="collapseWidthExample">
@@ -57,14 +44,14 @@ function Applandingpage() {
               <p className="m-0 fw-bold fm text-light fs-4 fw-bold">AppName</p>
               <hr className="w-100 m-0 mb-1 text-light">
               </hr>
-              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Dashboard")}}>Dashboard</p>
-              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Contact")}}>Contact</p>
-              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Team")}}>About</p>
-              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Project")}}>Project</p>
-              <p className="m-0 py-1  fw-bold fm text-light abc" onClick={()=>{setActivePage("Report")}}>Report</p>
-              <p type="button" className="btn btn-outline-light m-0 mt-auto">
+              <Link to={""} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Dashboard</Link>
+              <Link to={"contact"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Contact</Link>
+              <Link to={"about"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">About</Link>
+              <Link to={"project"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Project</Link>
+              <Link to={"report"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Report</Link>
+              <Link to={"addnew"} type="button" className="btn btn-outline-light m-0 mt-auto">
                 + add new entry
-              </p>
+              </Link>
             </div>
           </div>
         </div>
@@ -90,7 +77,7 @@ function Applandingpage() {
           {/**************start containt area*******************/}
 
           <div className="container-fluid hight-1 bg-info overflow-y-auto">
-            {rendercontent()}
+            <Outlet></Outlet>
           </div>
           {/**************end containt area*******************/}
 
