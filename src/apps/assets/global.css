@@ -168,9 +168,21 @@
   .mt-5{
     margin-top: 15px !important;
   }
+  .t-al-c{
+    text-align: center !important;
+  }
+  .jus-cen{
+    justify-content: center !important;
+  }
+  .mtt{
+    margin-top: 10px;
+  }
 
 }
 
 .imggg{
     height: 200px;
+}
+.imgggg{
+    width: 70px;
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
+import axios from 'axios';
 
 export default function UserRegistor() {
     const nav = useNavigate();
@@ -14,11 +15,13 @@ export default function UserRegistor() {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const formsubmit = (data) => {
-        console.log(data);
-        toast.success("new account created successfully", { autoClose: 5000 });
-        setTimeout(() => {
-            nav("/usermanagement")
-        }, 5000)
+        axios.post("http://localhost:4000/user", data).then((x) => {
+            console.log(x)
+            toast.success(x.statusText, { autoClose: 5000 });
+            setTimeout(() => {
+                nav("/usermanagement")
+            }, 5000)
+        })
     }
 
 
