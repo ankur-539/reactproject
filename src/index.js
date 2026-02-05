@@ -12,9 +12,9 @@ import Applandingpage from './apps/modules/dashboard/Applandingpage';
 import Apperror from './apps/modules/sharecomponents/Apperror';
 import Userdashboard from './apps/modules/dashboard/Userdashboard';
 import Contact from './apps/modules/dashboard/Contact';
-import About from './apps/modules/dashboard/About';
 import Project from './apps/modules/dashboard/Project';
 import Report from './apps/modules/dashboard/Report';
+import Product from './apps/modules/dashboard/Product';
 
 
 
@@ -30,7 +30,7 @@ root.render(
         <Route path='usermanagement/dashboard' element={<Applandingpage></Applandingpage>}>
           <Route path='' element={<Userdashboard></Userdashboard>} />
           <Route path='contact' element={<Contact></Contact>} />
-          <Route path='about' element={<About></About>} />
+          <Route path='product' element={<Product></Product>} />
           <Route path='project' element={<Project></Project>} />
           <Route path='report' element={<Report></Report>} />
 

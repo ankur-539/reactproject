@@ -1,9 +1,9 @@
 
 import { VscLayoutSidebarLeft } from "react-icons/vsc";
 import { FaFolderClosed } from "react-icons/fa6";
-import { RiTeamFill } from "react-icons/ri";
 import { FaChartPie } from "react-icons/fa";
 import { AiFillSetting } from "react-icons/ai";
+import { MdProductionQuantityLimits } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
@@ -33,7 +33,7 @@ function Applandingpage() {
             <hr className="w-100 m-0" />
             <Link to={""} className="text-white"><MdDashboard></MdDashboard></Link>
             <Link to={"contact"} className="text-white"><MdContacts></MdContacts></Link>
-            <Link to={"about"} className="text-white"><RiTeamFill></RiTeamFill></Link>
+            <Link to={"product"} className="text-white"><MdProductionQuantityLimits></MdProductionQuantityLimits></Link>
             <Link to={"project"} className="text-white"><FaFolderClosed></FaFolderClosed></Link>
             <Link to={"report"} className="text-white"><FaChartPie></FaChartPie></Link>
             <Link to={"setting"} className="text-white mt-auto mb-2 fs-5"><AiFillSetting></AiFillSetting></Link>
@@ -46,7 +46,7 @@ function Applandingpage() {
               </hr>
               <Link to={""} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Dashboard</Link>
               <Link to={"contact"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Contact</Link>
-              <Link to={"about"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">About</Link>
+              <Link to={"product"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Product</Link>
               <Link to={"project"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Project</Link>
               <Link to={"report"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Report</Link>
               <Link to={"addnew"} type="button" className="btn btn-outline-light m-0 mt-auto">

@@ -119,6 +119,14 @@
     scale: 1;
     cursor: pointer;
 }
+.abc1{
+    transition: 0.3s ease;
+}
+.abc1:hover{
+    color: black !important;
+    scale: 1.05;
+    cursor: pointer;
+}
 .pro{
     border-radius: 50%;
     border: 1px solid black;
@@ -147,8 +155,22 @@
     border: none !important;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .hide {
     display: none;
   }
+  .fs-7{
+    font-size: 35px;
+  }
+  .fs-4{
+    font-size: 10px !important;
+  }
+  .mt-5{
+    margin-top: 15px !important;
+  }
+
+}
+
+.imggg{
+    height: 200px;
 }
