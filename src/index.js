@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client';
 // import Abc from './Basic';
 // import Registerform from './Register';
 // import './Style.css'
-import Checkbox from './Checkbox';
+// import Checkbox from './Checkbox';
+import RedioAndSelect from './RedioAndSelect';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Abc></Abc> */}
     {/* <Registerform></Registerform> */}
-    <Checkbox></Checkbox>
+    {/* <Checkbox></Checkbox> */}
+    <RedioAndSelect></RedioAndSelect>
   </React.StrictMode>
 );
