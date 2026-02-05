@@ -32,14 +32,14 @@ function Applandingpage() {
               aria-expanded="false" aria-controls="collapseWidthExample" />
             <hr className="w-100 m-0" />
             <Link to={""} className="text-white"><MdDashboard></MdDashboard></Link>
-            <Link to={"contact"} className="text-white"><MdContacts></MdContacts></Link>
+            <Link to={"contact"} className="text-white" ><MdContacts></MdContacts></Link>
             <Link to={"product"} className="text-white"><MdProductionQuantityLimits></MdProductionQuantityLimits></Link>
             <Link to={"project"} className="text-white"><FaFolderClosed></FaFolderClosed></Link>
             <Link to={"report"} className="text-white"><FaChartPie></FaChartPie></Link>
             <Link to={"setting"} className="text-white mt-auto mb-2 fs-5"><AiFillSetting></AiFillSetting></Link>
           </div>
 
-          <div className="collapse collapse-horizontal w-75" id="collapseWidthExample">
+          <div className="collapse collapse-horizontal w-75 hide" id="collapseWidthExample">
             <div className="card card-body rounded-0 border-0 hight c-bg-4 gap-3">
               <p className="m-0 fw-bold fm text-light fs-4 fw-bold">AppName</p>
               <hr className="w-100 m-0 mb-1 text-light">
