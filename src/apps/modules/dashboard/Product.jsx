@@ -48,8 +48,8 @@ function Product() {
           </div>
         </div>
         <div className="col-sm-6 text-end t-al-c mtt">
-          <span className="badge bg-light text-black me-2 fs-5" onClick={showDataInCard}><TbCards /></span>
-          <span className="badge bg-light text-black me-2 fs-5" onClick={showDataInTable}><FaTable /></span>
+          <span className="badge bg-light text-black me-2 fs-5"><TbCards /></span>
+          <span className="badge bg-light text-black me-2 fs-5" ><FaTable /></span>
           <span className="badge bg-light text-black fs-5"><FaListAlt /></span>
         </div>
       </div>
