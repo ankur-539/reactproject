@@ -38,6 +38,7 @@ function Product() {
               <option>Manufacturer</option>
               <option>Name</option>
               <option>Price</option>
+              <option>Categories</option>
             </select>
           </div>
 
