@@ -186,3 +186,9 @@
 .imgggg{
     width: 70px;
 }
+.action{
+    transition: 0.3s ease;
+}
+.action:active{
+    scale: 1.1;
+}

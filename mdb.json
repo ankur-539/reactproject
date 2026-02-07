@@ -1,49 +1,31 @@
 {
   "user": [
     {
-      "id": "809d",
-      "username": "Ankur",
-      "dob": "2026-02-16",
-      "emailid": "ankur@gmail.com",
-      "userphone": "6767676767",
-      "pass": "Ab@1hjhdh",
-      "profileurl": "https://loading.io/background/m-wave/"
-    },
-    {
-      "id": "2480",
+      "id": "42fb",
       "username": "Ankur",
       "dob": "2026-02-18",
       "emailid": "ankur@gmail.com",
       "userphone": "6767676767",
-      "pass": "ahsah@A122",
-      "profileurl": "https://loading.io/background/m-wave/"
+      "pass": "sa@Asadada22",
+      "profileurl": "https://google.com"
     },
     {
-      "id": "3a15",
-      "username": "Ankur",
-      "dob": "2026-02-03",
-      "emailid": "ankur@gmail.com",
+      "id": "de69",
+      "username": "divakar",
+      "dob": "2026-02-17",
+      "emailid": "divakarbug01@gmail.com",
       "userphone": "6767676767",
-      "pass": "jhdjha@1A",
-      "profileurl": "https://loading.io/background/m-wave/"
+      "pass": "asas@A23",
+      "profileurl": "https://divakar"
     },
     {
-      "id": "dcfe",
-      "username": "Ankur",
-      "dob": "2026-02-11",
-      "emailid": "ankur@gmail.com",
+      "id": "4651",
+      "username": "divakar",
+      "dob": "2026-02-17",
+      "emailid": "divakarbug01@gmail.com",
       "userphone": "6767676767",
-      "pass": "sds@2Asds",
-      "profileurl": "https://loading.io/background/m-wave/"
-    },
-    {
-      "id": "33fb",
-      "username": "Ankur",
-      "dob": "2026-02-18",
-      "emailid": "ankur@gmail.com",
-      "userphone": "6767676767",
-      "pass": "asas@2Aaad",
-      "profileurl": "https://loading.io/background/m-wave/"
+      "pass": "asas@A23",
+      "profileurl": "https://divakar"
     }
   ],
   "product": []

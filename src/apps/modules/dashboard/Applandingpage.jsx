@@ -14,6 +14,7 @@ import { ImGithub } from "react-icons/im";
 import { FaYoutube } from "react-icons/fa6";
 import { MdContacts } from "react-icons/md";
 import { Link, Outlet } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -23,7 +24,7 @@ function Applandingpage() {
 
 
   return (
-    <div className="container-fluid overflow-hidden">
+    <div className="container-fluid overflow-hidden fm">
       <div className="row d-flex ">
         {/**************start side bar*******************/}
         <div className="col-1 g-0 w-auto d-flex">
@@ -77,6 +78,7 @@ function Applandingpage() {
           {/**************start containt area*******************/}
 
           <div className="container-fluid hight-1 bg-info overflow-y-auto">
+            <ToastContainer></ToastContainer>
             <Outlet></Outlet>
           </div>
           {/**************end containt area*******************/}
