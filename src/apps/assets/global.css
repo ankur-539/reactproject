@@ -72,6 +72,9 @@
 .fs-8{
     font-size: 60px;
 }
+.fs-9{
+    font-size: 25px;
+}
 .c-font-gr{
     background: linear-gradient(aqua,yellow);
     color: transparent;

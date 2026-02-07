@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaDeleteLeft } from "react-icons/fa6";
 import { FaRegEdit } from "react-icons/fa";
-import { toast } from "react-toastify";
+import { ToastContainer,toast } from "react-toastify";
 
 
 function Userdashboard() {
@@ -31,6 +31,7 @@ function Userdashboard() {
 
     return (
         <div className="row mt-3">
+            <ToastContainer/>
             <div className="col-sm-3">
                 <div className="card text-center mb-3 hight-5">
                     <div className="card-body">
@@ -75,8 +76,14 @@ function Userdashboard() {
             </div>
             <div className="col-sm-12">
                 <div className="card text-center">
-                    <div className="card-body bg-white overflow-auto">
-                        <p className="fs-4 fw-medium">List of User Details</p>
+                    <div className="card-body bg-white bg-danger overflow-auto rounded-5">
+                        <table className="w-100 mb-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col" className="fs-9 ">List of User Details</th>
+                                </tr>
+                            </thead>
+                        </table>
                         <table className="table table-light">
                             <thead>
                                 <tr>
@@ -93,7 +100,7 @@ function Userdashboard() {
                             <tbody>
                                 {userData.map((e) => {
                                     return (
-                                        <tr>
+                                        <tr key={e.id}>
                                             <th scope="row" className="border align-middle">{e.id}</th>
                                             <td className="border align-middle">{e.username}</td>
                                             <td className="border align-middle">{e.emailid}</td>

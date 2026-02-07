@@ -47,7 +47,7 @@ function Product() {
               {item.map((d) => {
                 if (opt === "name") {
                   return (
-                    <option value={d.name}>{d.name}</option>
+                    <option value={d.name} >{d.name}</option>
                   )
                 }
                 else if (opt === "menufacturer")
@@ -76,7 +76,7 @@ function Product() {
       {structure === "card" && <div className="row">
         {item.map((d) => {
           return (
-            <div className="col-md-3">
+            <div className="col-md-3" key={d.id}>
               <div className="card mt-4 border-0 shadow abc1">
                 <img src={d.image} className="card-img-top imggg" alt="..." />
                 <div className="card-body ">
@@ -107,7 +107,7 @@ function Product() {
             <tbody>
               {item.map((d) => {
                 return (
-                  <tr>
+                  <tr key={d.id}>
                     <td className='border'><img src={d.image} alt='...' className='imgggg' /></td>
                     <td className='border'>{d.name}</td>
                     <td className='border'>{d.price}</td>
@@ -125,12 +125,12 @@ function Product() {
       {structure === "list" && <div className="row">
         {item.map((d) => {
           return (
-            <div className="col-sm-4 mt-4">
-              <ul class="list-group list-group-numbered">
-                <li class="list-group-item"><b>Name: </b>{d.name}</li>
-                <li class="list-group-item"><b>Manufacturer: </b>{d.manufacturer}</li>
-                <li class="list-group-item"><b>Price: </b>{d.price}₹</li>
-                <li class="list-group-item"><b>Categories: </b>{d.product_category.name}</li>
+            <div className="col-sm-4 mt-4" key={d.id}>
+              <ul className="list-group list-group-numbered">
+                <li className="list-group-item"><b>Name: </b>{d.name}</li>
+                <li className="list-group-item"><b>Manufacturer: </b>{d.manufacturer}</li>
+                <li className="list-group-item"><b>Price: </b>{d.price}₹</li>
+                <li className="list-group-item"><b>Categories: </b>{d.product_category.name}</li>
               </ul>
             </div>
           )
