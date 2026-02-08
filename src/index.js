@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 // import './Style.css'
 // import Checkbox from './Checkbox';
 // import RedioAndSelect from './RedioAndSelect';
-import Clock from './Clock';
+// import Clock from './Clock';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +15,6 @@ root.render(
     {/* <Registerform></Registerform> */}
     {/* <Checkbox></Checkbox> */}
     {/* <RedioAndSelect></RedioAndSelect> */}
-    <Clock></Clock>
+    {/* <Clock></Clock> */}
   </React.StrictMode>
 );
