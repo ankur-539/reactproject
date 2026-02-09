@@ -1,15 +1,6 @@
 {
   "user": [
     {
-      "id": "0793",
-      "username": "Ankur",
-      "dob": "2026-02-10",
-      "emailid": "ankur@gmail.com",
-      "userphone": "6767676767",
-      "pass": "assas@A12",
-      "profileurl": "https://google.com"
-    },
-    {
       "id": "f944",
       "username": "Ankur",
       "dob": "2026-02-10",
@@ -199,13 +190,13 @@
       "profileurl": "https://google.com"
     },
     {
-      "id": "e4a8",
-      "username": "Ankur",
-      "dob": "2026-02-10",
+      "id": "8dac",
+      "username": "jjdsfjj",
+      "dob": "2026-02-13",
       "emailid": "ankur@gmail.com",
       "userphone": "6767676767",
-      "pass": "assas@A12",
-      "profileurl": "https://google.com"
+      "pass": "hghdgf@A12",
+      "profileurl": "https://divakar"
     }
   ],
   "product": []
