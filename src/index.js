@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom/client';
 // import Checkbox from './Checkbox';
 // import RedioAndSelect from './RedioAndSelect';
 // import Clock from './Clock';
+import Xyz from './Xyz';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,5 +17,6 @@ root.render(
     {/* <Checkbox></Checkbox> */}
     {/* <RedioAndSelect></RedioAndSelect> */}
     {/* <Clock></Clock> */}
+    <Xyz></Xyz>
   </React.StrictMode>
 );
