@@ -15,12 +15,17 @@ import { FaYoutube } from "react-icons/fa6";
 import { MdContacts } from "react-icons/md";
 import { Link, Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import { useRef } from "react";
 
 
 
 
 function Applandingpage() {
 
+  const searchRef = useRef(null);
+  const handelSearch = (event)=>{
+    searchRef.current.focus();
+  }
 
 
   return (
@@ -61,8 +66,8 @@ function Applandingpage() {
         <div className="col-1 g-0 flex-grow-1">
           {/**************start search bar*******************/}
           <div className=" shadow d-flex align-items-center px-4 py-3 c-bg-4 text-white hight-3">
-            <FaSearch className='fs-5 hide'></FaSearch>
-            <input className="form-control border-0 w-50 mx-3 " type="search" placeholder="Search" aria-label="Search" />
+            <FaSearch className='fs-5 hide' onClick={handelSearch}></FaSearch>
+            <input className="form-control border-0 w-50 mx-3 " type="search" placeholder="Search" aria-label="Search" ref={searchRef} />
             <FaRegBell className='ms-auto me-4 c-pointer fs-4 hide'></FaRegBell>
             <div className='pro me-3 p-3'></div>
             <div className="dropdown text-white">

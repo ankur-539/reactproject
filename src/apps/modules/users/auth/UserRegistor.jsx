@@ -7,6 +7,8 @@ import axios from 'axios';
 export default function UserRegistor() {
     const nav = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
+    const [isDisabled, setisDisabled] = useState(false);
+
 
     const HideAndShow = (e) => {
         setShowPassword(e.target.checked)
@@ -17,6 +19,7 @@ export default function UserRegistor() {
     const formsubmit = (data) => {
         axios.post("http://localhost:4000/user", data).then((x) => {
             console.log(x)
+            setisDisabled(true);
             toast.success(x.statusText, { autoClose: 5000 });
             setTimeout(() => {
                 nav("/usermanagement")
@@ -82,7 +85,7 @@ export default function UserRegistor() {
                                 <input type="checkbox" className="form-check-input" onChange={HideAndShow} />
                                 <label className="form-check-label">Show Password</label>
                             </div>
-                            <input type="submit" className="btn w-100 btn-success mt-3" ></input>
+                            <input type="submit" className="btn w-100 btn-success mt-3" disabled={isDisabled}></input>
                         </div>
 
 

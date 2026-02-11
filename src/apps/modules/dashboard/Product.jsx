@@ -11,9 +11,13 @@ function Product() {
   const [structure, setStructure] = useState("card")
   const prodapi = () => {
 
-    axios.get("https://jsonfakery.com/products/random/32").then((e) => {
-      console.log(e.data);
-      updateitem(e.data)
+    // axios.get("https://jsonfakery.com/products/random/32").then((e) => {
+    //   console.log(e.data);
+    //   updateitem(e.data)
+    // })
+    axios.get('https://dummyjson.com/products?limit=100').then((e) => {
+      console.log(e.data.products);
+      updateitem(e.data.products)
     })
 
   };
@@ -34,7 +38,6 @@ function Product() {
           <div className="form-check form-check-inline p-0 ">
             <select className='form-select' onChange={handleOption}>
               <option hidden value="datafilter">Filter Product By</option>
-              <option value="menufacturer">Manufacturer</option>
               <option value="name">Name</option>
               <option value="price">Price</option>
               <option value="categories">Categories</option>
@@ -47,20 +50,16 @@ function Product() {
               {item.map((d) => {
                 if (opt === "name") {
                   return (
-                    <option value={d.name} >{d.name}</option>
+                    <option value={d.title} >{d.title}</option>
                   )
                 }
-                else if (opt === "menufacturer")
-                  return (
-                    <option value={d.manufacturer}>{d.manufacturer}</option>
-                  )
                 else if (opt === "price")
                   return (
-                    <option value={d.price}>{d.price}</option>
+                    <option value={d.price}>{d.price}₹</option>
                   )
                 else if (opt === "categories")
                   return (
-                    <option value={d.product_category.name}>{d.product_category.name}</option>
+                    <option value={d.category}>{d.category}</option>
                   )
               })}
             </select>
@@ -75,19 +74,61 @@ function Product() {
 
       {structure === "card" && <div className="row">
         {item.map((d) => {
-          return (
-            <div className="col-md-3" key={d.id}>
-              <div className="card mt-4 border-0 shadow abc1">
-                <img src={d.image} className="card-img-top imggg" alt="..." />
-                <div className="card-body ">
-                  <h5 className="card-title"><b>Name: </b>{d.name}</h5>
-                  <p className="card-text"><b>Category : </b>{d.product_category.name}</p>
-                  <p className="card-text"><b>Price : </b>{d.price}₹</p>
-                  <Link to="" className="btn btn-primary">Add</Link>
-                </div>
+          if (d.price <= 50) {
+            return (
+              <div className="col-md-3" key={d.id}>
+                <Link to={"details/" + d.id} className='text-decoration-none'>
+                  <div className="card mt-4 border-0 shadow abc1 bg-light bg-gradient">
+                    <span class="badge text-bg-info position-absolute poss blink">Top Pics</span>
+                    <img src={d.thumbnail} className="card-img-top imggg" alt="..." />
+                    <div className="card-body bg-white rounded-bottom">
+                      <h5 className="card-title fw-bold">{d.title}</h5>
+                      <p className="card-text"><b>Category : </b>{d.category}</p>
+                      <p className="card-text"><b>Price : </b>{d.price}₹</p>
+                      <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
+                    </div>
+                  </div>
+                </Link>
               </div>
-            </div>
-          )
+            )
+          }
+          else if(d.price > 50 && d.price <= 500) {
+            return (
+              <div className="col-md-3" key={d.id}>
+                <Link to={"details/" + d.id} className='text-decoration-none'>
+                  <div className="card mt-4 border-0 shadow abc1 bg-light bg-gradient">
+                    <span className="badge text-bg-danger position-absolute poss blink">Top Sellers</span>
+                    <img src={d.thumbnail} className="card-img-top imggg" alt="..." />
+                    <div className="card-body bg-white rounded-bottom">
+                      <h5 className="card-title fw-bold">{d.title}</h5>
+                      <p className="card-text"><b>Category : </b>{d.category}</p>
+                      <p className="card-text"><b>Price : </b>{d.price}₹</p>
+                      <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )
+          }
+
+          else {
+            return (
+              <div className="col-md-3" key={d.id}>
+                <Link to={"details/" + d.id} className='text-decoration-none'>
+                  <div className="card mt-4 border-0 shadow abc1 bg-light bg-gradient">
+                    <span className="badge text-bg-warning position-absolute poss blink">premium</span>
+                    <img src={d.thumbnail} className="card-img-top imggg" alt="..." />
+                    <div className="card-body bg-white rounded-bottom">
+                      <h5 className="card-title fw-bold">{d.title}</h5>
+                      <p className="card-text"><b>Category : </b>{d.category}</p>
+                      <p className="card-text"><b>Price : </b>{d.price}₹</p>
+                      <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )
+          }
         })}
       </div>}
 
@@ -96,24 +137,26 @@ function Product() {
           <table className="table">
             <thead>
               <tr>
+                <th scope="col" className='border'>Id</th>
                 <th scope="col" className='border'>Image</th>
                 <th scope="col" className='border'>Name</th>
                 <th scope="col" className='border'>Price</th>
-                <th scope="col" className='border'>Manufacturer</th>
                 <th scope="col" className='border'>Categories</th>
-                <th scope="col" className='border'>Id</th>
+                <th scope="col" className='border'>Stock</th>
+                <th scope="col" className='border'>Rating</th>
               </tr>
             </thead>
             <tbody>
               {item.map((d) => {
                 return (
                   <tr key={d.id}>
-                    <td className='border'><img src={d.image} alt='...' className='imgggg' /></td>
-                    <td className='border'>{d.name}</td>
-                    <td className='border'>{d.price}</td>
-                    <td className='border'>{d.manufacturer}</td>
-                    <td className='border'>{d.product_category.name}</td>
-                    <td className='border'>{d.id}</td>
+                    <td className='border align-middle'>{d.id}</td>
+                    <td className='border align-middle'><img src={d.thumbnail} alt='...' className='imgggg' /></td>
+                    <td className='border align-middle'>{d.title}</td>
+                    <td className='border align-middle'>{d.price}₹</td>
+                    <td className='border align-middle'>{d.category}</td>
+                    <td className='border align-middle'>{d.stock}</td>
+                    <td className='border align-middle'>{d.rating}</td>
                   </tr>
                 )
               })}
@@ -127,10 +170,10 @@ function Product() {
           return (
             <div className="col-sm-4 mt-4" key={d.id}>
               <ul className="list-group list-group-numbered">
-                <li className="list-group-item"><b>Name: </b>{d.name}</li>
-                <li className="list-group-item"><b>Manufacturer: </b>{d.manufacturer}</li>
+                <li className="list-group-item"><b>Name: </b>{d.title}</li>
                 <li className="list-group-item"><b>Price: </b>{d.price}₹</li>
-                <li className="list-group-item"><b>Categories: </b>{d.product_category.name}</li>
+                <li className="list-group-item"><b>Categories: </b>{d.category}</li>
+                <li className="list-group-item"><b>Stock: </b>{d.stock}</li>
               </ul>
             </div>
           )

@@ -15,6 +15,7 @@ import Contact from './apps/modules/dashboard/Contact';
 import Project from './apps/modules/dashboard/Project';
 import Report from './apps/modules/dashboard/Report';
 import Product from './apps/modules/dashboard/Product';
+import Productdetails from './apps/modules/dashboard/Productdetails';
 
 
 
@@ -33,6 +34,7 @@ root.render(
           <Route path='product' element={<Product></Product>} />
           <Route path='project' element={<Project></Project>} />
           <Route path='report' element={<Report></Report>} />
+          <Route path='product/details/:id' element={<Productdetails></Productdetails>} />
 
           <Route path='*' element={<Apperror />}></Route>
         </Route>
