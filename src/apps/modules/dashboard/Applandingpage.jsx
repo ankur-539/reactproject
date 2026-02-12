@@ -40,7 +40,7 @@ function Applandingpage() {
             <Link to={""} className="text-white"><MdDashboard></MdDashboard></Link>
             <Link to={"contact"} className="text-white" ><MdContacts></MdContacts></Link>
             <Link to={"product"} className="text-white"><MdProductionQuantityLimits></MdProductionQuantityLimits></Link>
-            <Link to={"project"} className="text-white"><FaFolderClosed></FaFolderClosed></Link>
+            <Link to={"graph"} className="text-white"><FaFolderClosed></FaFolderClosed></Link>
             <Link to={"report"} className="text-white"><FaChartPie></FaChartPie></Link>
             <Link to={"setting"} className="text-white mt-auto mb-2 fs-5"><AiFillSetting></AiFillSetting></Link>
           </div>
@@ -53,7 +53,7 @@ function Applandingpage() {
               <Link to={""} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Dashboard</Link>
               <Link to={"contact"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Contact</Link>
               <Link to={"product"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Product</Link>
-              <Link to={"project"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Project</Link>
+              <Link to={"graph"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Graph</Link>
               <Link to={"report"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Report</Link>
               <Link to={"addnew"} type="button" className="btn btn-outline-light m-0 mt-auto">
                 + add new entry

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ReactImageMagnify from 'react-image-magnify';
+
 
 function Productdetails() {
     const { id } = useParams();
@@ -29,22 +29,7 @@ function Productdetails() {
         <div className='container-fluid hight-1 bg-white'>
             <div className='row bg-light'>
                 <div className='col-md-3 border d-flex align-items-center justify-content-center flex-column'>
-                    {item.thumbnail && (
-                        <ReactImageMagnify
-                            {...{
-                                smallImage: {
-                                    alt: item.title,
-                                    isFluidWidth: true,
-                                    src: item.thumbnail,
-                                },
-                                largeImage: {
-                                    src: item.thumbnail,
-                                    width: 1200,
-                                    height: 1800,
-                                },
-                            }}
-                        />
-                    )}
+                    <img src={item.thumbnail} className='w-100 h-w' alt={item.id} />
                 </div>
 
                 <div className='col-md-7 pt-3'>
