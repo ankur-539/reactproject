@@ -29,7 +29,7 @@ function Productdetails() {
         <div className='container-fluid hight-1 bg-white'>
             <div className='row bg-light'>
                 <div className='col-md-3 border d-flex align-items-center justify-content-center flex-column'>
-                    <img src={item.thumbnail} className='w-100 h-w' alt={item.id} />
+                    <img src={item.thumbnail} alt={item.id} />
                 </div>
 
                 <div className='col-md-7 pt-3'>
@@ -64,7 +64,6 @@ function Productdetails() {
                         <div className="card-body">
                             <h2 className="card-title">₹{item.price * qntt}</h2>
                             <select className="form-select mt-4" aria-label="Default select example" value={qntt} onChange={abc}>
-                                <option selected>Select quntity</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

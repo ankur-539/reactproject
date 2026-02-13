@@ -1,6 +1,5 @@
 
 import { VscLayoutSidebarLeft } from "react-icons/vsc";
-import { FaFolderClosed } from "react-icons/fa6";
 import { FaChartPie } from "react-icons/fa";
 import { AiFillSetting } from "react-icons/ai";
 import { MdProductionQuantityLimits } from "react-icons/md";
@@ -16,6 +15,7 @@ import { MdContacts } from "react-icons/md";
 import { Link, Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { useRef } from "react";
+import { VscGraph } from "react-icons/vsc";
 
 
 
@@ -40,7 +40,7 @@ function Applandingpage() {
             <Link to={""} className="text-white"><MdDashboard></MdDashboard></Link>
             <Link to={"contact"} className="text-white" ><MdContacts></MdContacts></Link>
             <Link to={"product"} className="text-white"><MdProductionQuantityLimits></MdProductionQuantityLimits></Link>
-            <Link to={"graph"} className="text-white"><FaFolderClosed></FaFolderClosed></Link>
+            <Link to={"graph"} className="text-white"><VscGraph></VscGraph></Link>
             <Link to={"report"} className="text-white"><FaChartPie></FaChartPie></Link>
             <Link to={"setting"} className="text-white mt-auto mb-2 fs-5"><AiFillSetting></AiFillSetting></Link>
           </div>

@@ -30,6 +30,10 @@ function Product() {
     setOpt(e.target.value);
   }
 
+  const filterdata = (f) => {
+    console.log(f.target.value)
+  }
+
 
   return (
     <div className="container-fluid">
@@ -45,7 +49,7 @@ function Product() {
           </div>
 
           <div className="form-check form-check-inline p-0">
-            <select className='form-select' id='o'>
+            <select className='form-select' id='o' onChange={filterdata}>
               <option hidden>By:-{opt}</option>
               {item.map((d) => {
                 if (opt === "name") {
@@ -179,6 +183,7 @@ function Product() {
           )
         })}
       </div>}
+      
     </div>
   )
 }
