@@ -1,25 +1,7 @@
 {
   "user": [
     {
-      "id": "8a55",
-      "username": "Ankur",
-      "dob": "2026-02-10",
-      "emailid": "ankur@gmail.com",
-      "userphone": "6767676767",
-      "pass": "assas@A12",
-      "profileurl": "https://google.com"
-    },
-    {
       "id": "ddbe",
-      "username": "Ankur",
-      "dob": "2026-02-10",
-      "emailid": "ankur@gmail.com",
-      "userphone": "6767676767",
-      "pass": "assas@A12",
-      "profileurl": "https://google.com"
-    },
-    {
-      "id": "030f",
       "username": "Ankur",
       "dob": "2026-02-10",
       "emailid": "ankur@gmail.com",
@@ -244,5 +226,147 @@
       "profileurl": "https://divakar"
     }
   ],
-  "product": []
+  "sales": [
+    {
+      "id": 1,
+      "product_name": "Wireless Mouse",
+      "stock": 120,
+      "price": 599,
+      "discount": 10
+    },
+    {
+      "id": 2,
+      "product_name": "Bluetooth Headphones",
+      "stock": 75,
+      "price": 2499,
+      "discount": 15
+    },
+    {
+      "id": 3,
+      "product_name": "USB-C Charger",
+      "stock": 200,
+      "price": 899,
+      "discount": 5
+    },
+    {
+      "id": 4,
+      "product_name": "Laptop Stand",
+      "stock": 45,
+      "price": 1299,
+      "discount": 20
+    },
+    {
+      "id": 5,
+      "product_name": "Mechanical Keyboard",
+      "stock": 30,
+      "price": 4499,
+      "discount": 25
+    },
+    {
+      "id": 6,
+      "product_name": "Gaming Mouse Pad",
+      "stock": 90,
+      "price": 499,
+      "discount": 10
+    },
+    {
+      "id": 7,
+      "product_name": "Smartphone Case",
+      "stock": 180,
+      "price": 399,
+      "discount": 30
+    },
+    {
+      "id": 8,
+      "product_name": "Screen Protector",
+      "stock": 300,
+      "price": 199,
+      "discount": 40
+    },
+    {
+      "id": 9,
+      "product_name": "USB Flash Drive 32GB",
+      "stock": 150,
+      "price": 699,
+      "discount": 15
+    },
+    {
+      "id": 10,
+      "product_name": "External Hard Disk 1TB",
+      "stock": 40,
+      "price": 5499,
+      "discount": 18
+    },
+    {
+      "id": 11,
+      "product_name": "Wireless Keyboard",
+      "stock": 60,
+      "price": 1899,
+      "discount": 12
+    },
+    {
+      "id": 12,
+      "product_name": "Webcam HD",
+      "stock": 55,
+      "price": 2299,
+      "discount": 22
+    },
+    {
+      "id": 13,
+      "product_name": "Desk Lamp LED",
+      "stock": 70,
+      "price": 999,
+      "discount": 10
+    },
+    {
+      "id": 14,
+      "product_name": "Power Bank 10000mAh",
+      "stock": 130,
+      "price": 1199,
+      "discount": 20
+    },
+    {
+      "id": 15,
+      "product_name": "Bluetooth Speaker",
+      "stock": 65,
+      "price": 2999,
+      "discount": 25
+    },
+    {
+      "id": 16,
+      "product_name": "Laptop Backpack",
+      "stock": 40,
+      "price": 2499,
+      "discount": 15
+    },
+    {
+      "id": 17,
+      "product_name": "HDMI Cable",
+      "stock": 220,
+      "price": 349,
+      "discount": 35
+    },
+    {
+      "id": 18,
+      "product_name": "Wireless Router",
+      "stock": 25,
+      "price": 3499,
+      "discount": 10
+    },
+    {
+      "id": 19,
+      "product_name": "Smart LED Bulb",
+      "stock": 95,
+      "price": 799,
+      "discount": 18
+    },
+    {
+      "id": 20,
+      "product_name": "Extension Board",
+      "stock": 160,
+      "price": 499,
+      "discount": 12
+    }
+    
+  ]
 }

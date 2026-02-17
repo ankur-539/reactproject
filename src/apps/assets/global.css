@@ -127,16 +127,12 @@
     height: 35vh;
 }
 
-.hight-5 {
-    height: 15vh;
-}
-
 .hight-6 {
     height: 24vh;
 }
 
 .hight-5 {
-    height: 15vh;
+    height: 25vh;
 }
 
 .w-h {
@@ -276,4 +272,12 @@
     100% {
         opacity: 1;
     }
+}
+.hide-scrollbar {
+  scrollbar-width: none;  
+  -ms-overflow-style: none;   
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;              
 }

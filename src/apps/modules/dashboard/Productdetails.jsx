@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-
 function Productdetails() {
     const { id } = useParams();
     const [item, setItem] = useState({});
