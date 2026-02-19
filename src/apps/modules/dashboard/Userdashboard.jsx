@@ -60,14 +60,14 @@ function Userdashboard() {
                 </div>
             </div>
             <div className="col-sm-8">
-                <div className="card text-center mb-3 hight-4 ">
+                <div className="card text-center mb-3">
                     <div className="card-body">
                         <Mychart />
                     </div>
                 </div>
             </div>
             <div className="col-sm-4">
-                <div className="card text-center hight-4">
+                <div className="card text-center mb-3">
                     <div className="card-body">
                         <MySecondGraph />
                     </div>

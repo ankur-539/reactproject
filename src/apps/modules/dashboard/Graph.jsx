@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { BarChart, Bar, Tooltip, Legend, XAxis, YAxis, PieChart, Pie } from 'recharts'
 
 function Graph() {
@@ -77,38 +77,34 @@ export default Graph;
 
 export function Mychart() {
 
-  const [data,setData] = useState([]);
+  const [data, setData] = useState([]);
   const myapi = () => {
-      axios.get("http://localhost:4000/sales").then((res)=>{
-        console.log(res.data);
-        setData(res.data);
-      })
-  } 
-  useEffect(()=>{
+    axios.get("http://localhost:4000/sales").then((res) => {
+      console.log(res.data);
+      setData(res.data);
+    })
+  }
+  useEffect(() => {
     myapi();
-  },[])
+  }, [])
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-sm-12">
-          <BarChart
-            style={{ width: '100%', maxWidth: '', maxHeight: '32vh', aspectRatio: 1.618 }}
-            responsive
-            data={data}
-          >
-            <Bar dataKey="price" fill="blue" />
-            <Bar dataKey="stock" fill="red" />
-            <Bar dataKey="discount" fill="salmon" />
-            <Tooltip />
-            <Legend />
-            <XAxis dataKey="product_name" />
-            <YAxis width="auto" />
+    <Fragment>
+      <BarChart
+        style={{ width: '100%', maxWidth: '', maxHeight: '30vh', aspectRatio: 1.618 }}
+        responsive
+        data={data}
+      >
+        <Bar dataKey="price" fill="blue" />
+        <Bar dataKey="final_price" fill="salmon" />
+        <Bar dataKey="stock" fill="red" />
+        <Tooltip />
+        <Legend />
+        <XAxis dataKey="product_name" />
+        <YAxis width="auto" />
 
-          </BarChart>
-        </div>
-      </div>
-    </div>
+      </BarChart>
+    </Fragment>
   )
 }
 
@@ -124,29 +120,24 @@ export function MySecondGraph({ isAnimationActive = true }: { isAnimationActive?
   ];
 
   return (
-
-    <div className="container-fluid bg-white g-0">
-      <div className="row">
-        <div className="col-sm-12 d-flex align-items-center justify-content-center">
-          <PieChart style={{ width: '100%', maxHeight: '30vh', aspectRatio: 1 }} responsive>
-            <Pie
-              dataKey="value"
-              startAngle={180}
-              endAngle={0}
-              data={data}
-              cx="50%"
-              cy="100%"
-              outerRadius="120%"
-              fill="#8884d8"
-              label
-              isAnimationActive={isAnimationActive}
-            />
-            <Tooltip/>
-            <Legend/>
-          </PieChart>
-        </div>
-      </div>
-    </div>
+    <Fragment>
+      <PieChart style={{ width: '100%', maxHeight: '30vh', aspectRatio: 1 }} responsive>
+        <Pie
+          dataKey="value"
+          startAngle={180}
+          endAngle={0}
+          data={data}
+          cx="50%"
+          cy="100%"
+          outerRadius="120%"
+          fill="#8884d8"
+          label
+          isAnimationActive={isAnimationActive}
+        />
+        <Tooltip />
+        <Legend />
+      </PieChart>
+    </Fragment>
 
   )
 }

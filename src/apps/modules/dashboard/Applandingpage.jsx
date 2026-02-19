@@ -23,9 +23,12 @@ import { VscGraph } from "react-icons/vsc";
 function Applandingpage() {
 
   const searchRef = useRef(null);
-  const handelSearch = (event)=>{
+  const handelSearch = (event) => {
     searchRef.current.focus();
   }
+
+  const userinfo = JSON.parse(localStorage.getItem("logininfo"));
+  console.log(userinfo.uemail);
 
 
   return (
@@ -71,7 +74,7 @@ function Applandingpage() {
             <FaRegBell className='ms-auto me-4 c-pointer fs-4 hide'></FaRegBell>
             <div className='pro me-3 p-3'></div>
             <div className="dropdown text-white">
-              <div className="dropdown-toggle c-pointer" data-bs-toggle="dropdown" aria-expanded="false">UserName</div>
+              <div className="dropdown-toggle c-pointer" data-bs-toggle="dropdown" aria-expanded="false">{userinfo.uemail}</div>
               <ul className="dropdown-menu mt-3">
                 <li><Link to="" className="dropdown-item" href="#">User profile</Link></li>
                 <li><Link to="/usermanagement" className="dropdown-item" href="#">Sign out</Link></li>

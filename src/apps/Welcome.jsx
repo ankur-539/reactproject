@@ -29,9 +29,9 @@ export default function Welcome() {
         // </div>
         <div className="container-fluid hight bg-image-4 overflow-hidden g-0 ">
             <div className="row bg-image-5 hight opacity-75">
-                <div class="position-absolute top-0 start-0 d-flex justify-content-start gap-4 flex-wrap w-auto overflow-y-auto hight p-5">
+                <div className="position-absolute top-0 start-0 d-flex justify-content-start gap-4 flex-wrap w-auto overflow-y-auto hight p-5">
                     {fakedata.map((e) => {
-                        return (<div>
+                        return (<div key={e.name}>
                             <Link to={e.routing} className={`card p-4 text-center shadow text-decoration-none back chover `}>
                                 <h1><FcBusinessman /></h1>
                                 <h5 className='fw-bold'>{e.name}</h5>

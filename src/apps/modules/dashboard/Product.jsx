@@ -17,7 +17,7 @@ function Product() {
     //   updateitem(e.data)
     // })
 
-    axios.get('https://dummyjson.com/products?limit=100').then((e) => {
+    axios.get('https://dummyjson.com/products?limit=194').then((e) => {
       console.log(e.data.products);
       updateitem(e.data.products);
       allUpdate(e.data.products);

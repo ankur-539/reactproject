@@ -8,6 +8,15 @@ import { useForm } from 'react-hook-form';
 function Userlogin() {
     const nav = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
+    const [email,setEmail]= useState("");
+    const [pass,setPass]= useState("");
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    }
+    const handlePass = (e) => {
+        setPass(e.target.value);
+    }
 
     const HideAndShow = (e) => {
         setShowPassword(e.target.checked)
@@ -16,11 +25,12 @@ function Userlogin() {
     const { register, handleSubmit, formState: {errors}} = useForm();
 
     const loginSubmit = (data)=> {
-        console.log(data);
+        // console.log(data);
         toast.success("Welcome to dashboard",{autoClose:2000});
         setTimeout(() => {
             nav("/usermanagement/dashboard")
         }, 2000)
+        localStorage.setItem("logininfo",JSON.stringify({uemail:email,upass:pass}));
     }
 
     return (
@@ -33,13 +43,13 @@ function Userlogin() {
                         <div className='col-md-4 border c-wid p-5 border-0 c-shadow rounded fm back'>
                             <div className="mb-3">
                                 <label className="form-label">Email address</label>
-                                <input type="email" className="form-control" {...register("emailid",{required:true,pattern:/^[a-zA-Z0-9](\.?[a-zA-Z0-9]){2,29}@gmail\.com$/})}/>
+                                <input type="email" className="form-control" value={email} onInput={handleEmail} {...register("emailid",{required:true,pattern:/^[a-zA-Z0-9](\.?[a-zA-Z0-9]){2,29}@gmail\.com$/})}/>
                                 {errors.emailid?.type ==="required" && <p className='text-danger'>email is required</p>}
                                 {errors.emailid?.type ==="pattern" && <p className='text-warning'>invalid email</p>}
                             </div>
                             <div className="mb-3">
                                 <label className="form-label">Password</label>
-                                <input type={showPassword ? "text" : "password"} className="form-control" {...register("pass",{required:true,minLength:6})} />
+                                <input type={showPassword ? "text" : "password"} value={pass} onInput={handlePass} className="form-control" {...register("pass",{required:true,minLength:6})} />
                                 {errors.pass?.type === "required" && <p className='text-danger'>pass is required</p>}
                                 {errors.pass?.type === "minLength" && <p className='text-warning'>minimum 6 character</p>}
                             </div>

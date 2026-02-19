@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { TbTruckReturn } from "react-icons/tb";
+
 
 function Productdetails() {
     const { id } = useParams();
@@ -44,7 +46,7 @@ function Productdetails() {
                     </h4>
 
                     {item.reviews && item.reviews.length > 0 && (
-                        <div className="mt-4">
+                        <div className="mt-4 mb-3">
                             <h5>Reviews:</h5>
                             {item.reviews.map((r, idx) => (
                                 <div key={idx} className="border-top pt-2">
@@ -54,6 +56,9 @@ function Productdetails() {
                                     <p className="mb-0">{r.comment}</p>
                                 </div>
                             ))}
+                            {/* <p className='fs-4 fw-bold  border '>{item.warrantyInformation}</p> */}
+                            <div className='p-3 bg-white rounded mt-2'><pre className='bg-light py-2 fw-bold text-danger rounded px-1 d-inline me-3'>{item.brand}</pre>{item.warrantyInformation}</div>
+                            <div className='p-3 bg-white rounded mt-2'><TbTruckReturn className=' me-2 ' />{item.returnPolicy}</div>
                         </div>
                     )}
                 </div>
