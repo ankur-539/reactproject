@@ -28,7 +28,6 @@ function Applandingpage() {
   }
 
   const userinfo = JSON.parse(localStorage.getItem("logininfo"));
-  console.log(userinfo.uemail);
 
 
   return (
@@ -44,7 +43,7 @@ function Applandingpage() {
             <Link to={"contact"} className="text-white" ><MdContacts></MdContacts></Link>
             <Link to={"product"} className="text-white"><MdProductionQuantityLimits></MdProductionQuantityLimits></Link>
             <Link to={"graph"} className="text-white"><VscGraph></VscGraph></Link>
-            <Link to={"report"} className="text-white"><FaChartPie></FaChartPie></Link>
+            <Link to={"redux"} className="text-white"><FaChartPie></FaChartPie></Link>
             <Link to={"setting"} className="text-white mt-auto mb-2 fs-5"><AiFillSetting></AiFillSetting></Link>
           </div>
 
@@ -57,7 +56,7 @@ function Applandingpage() {
               <Link to={"contact"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Contact</Link>
               <Link to={"product"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Product</Link>
               <Link to={"graph"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Graph</Link>
-              <Link to={"report"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Report</Link>
+              <Link to={"redux"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">redux</Link>
               <Link to={"addnew"} type="button" className="btn btn-outline-light m-0 mt-auto">
                 + add new entry
               </Link>

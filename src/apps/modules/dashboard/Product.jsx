@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { FaTable } from "react-icons/fa";
 import { FaListAlt } from "react-icons/fa";
 import { TbCards } from "react-icons/tb";
+import { FaCartShopping } from "react-icons/fa6";
+import { useDispatch, useSelector } from 'react-redux';
+import { cart } from "d:/Materials/reactproject/src/apps/modules/redux/ReduxFunctions";
+
 function Product() {
 
   const [item, updateitem] = useState([]);
@@ -34,14 +38,17 @@ function Product() {
 
   };
 
-  const filterEachItem = (d)=>{
+  const filterEachItem = (d) => {
     console.log(d.target.value);
-    const ankurfilter = allFilter.filter((ghr)=>{
+    const ankurfilter = allFilter.filter((ghr) => {
       // console.log("this is all filter value",ghr.title)
-      return (d.target.value === ghr.title||d.target.value === String(ghr.price)||d.target.value===ghr.category)
+      return (d.target.value === ghr.title || d.target.value === String(ghr.price) || d.target.value === ghr.category)
     });
     updateitem(ankurfilter);
+
   }
+  const addToCart = useSelector((al) => al.ankur.value);
+  const dispatch = useDispatch();
 
   return (
     <div className="container-fluid">
@@ -80,7 +87,14 @@ function Product() {
         <div className="col-sm-6 text-end t-al-c mtt">
           <span className="badge bg-light text-black me-2 fs-5" onClick={() => setStructure("card")}><TbCards /></span>
           <span className="badge bg-light text-black me-2 fs-5" onClick={() => setStructure("table")}><FaTable /></span>
-          <span className="badge bg-light text-black fs-5" onClick={() => setStructure("list")}><FaListAlt /></span>
+          <span className="badge bg-light text-black me-2 fs-5" onClick={() => setStructure("list")}><FaListAlt /></span>
+          {/* <span className="badge bg-light text-black me-2 fs-5"><FaCartShopping /></span> */}
+          <button type="button" class="btn mb-1 bg-light position-relative">
+            <FaCartShopping className='fs-5' />
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {addToCart}
+            </span>
+          </button>
         </div>
       </div>
 
@@ -98,6 +112,7 @@ function Product() {
                       <p className="card-text"><b>Category : </b>{d.category}</p>
                       <p className="card-text"><b>Price : </b>{d.price}₹</p>
                       <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
+                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={()=>dispatch(cart())}>Add to cart</button>
                     </div>
                   </div>
                 </Link>
@@ -116,6 +131,7 @@ function Product() {
                       <p className="card-text"><b>Category : </b>{d.category}</p>
                       <p className="card-text"><b>Price : </b>{d.price}₹</p>
                       <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
+                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={()=>dispatch(cart())}>Add to cart</button>
                     </div>
                   </div>
                 </Link>
@@ -135,6 +151,7 @@ function Product() {
                       <p className="card-text"><b>Category : </b>{d.category}</p>
                       <p className="card-text"><b>Price : </b>{d.price}₹</p>
                       <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
+                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={()=>dispatch(cart())}>Add to cart</button>
                     </div>
                   </div>
                 </Link>

@@ -12,35 +12,37 @@ import Applandingpage from './apps/modules/dashboard/Applandingpage';
 import Apperror from './apps/modules/sharecomponents/Apperror';
 import Userdashboard from './apps/modules/dashboard/Userdashboard';
 import Contact from './apps/modules/dashboard/Contact';
-import Report from './apps/modules/dashboard/Report';
+import ReduxWebPage from './apps/modules/redux/ReduxWebPage';
 import Product from './apps/modules/dashboard/Product';
 import Productdetails from './apps/modules/dashboard/Productdetails';
 import Graph from './apps/modules/dashboard/Graph';
-
-
+import { Provider } from 'react-redux';
+import { redStore } from './apps/modules/redux/ReduxStore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='' element={<Welcome></Welcome>} />
-        <Route path='usermanagement' element={<Userlogin></Userlogin>} />
-        <Route path='usermanagement/signup' element={<UserRegistor></UserRegistor>} />
-        <Route path='usermanagement/signup/login' element={<Userlogin></Userlogin>} />
-        <Route path='usermanagement/dashboard' element={<Applandingpage></Applandingpage>}>
-          <Route path='' element={<Userdashboard></Userdashboard>} />
-          <Route path='contact' element={<Contact></Contact>} />
-          <Route path='product' element={<Product></Product>} />
-          <Route path='graph' element={<Graph></Graph>} />
-          <Route path='report' element={<Report></Report>} />
-          <Route path='product/details/:id' element={<Productdetails></Productdetails>} />
+    <Provider store={redStore}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='' element={<Welcome></Welcome>} />
+          <Route path='usermanagement' element={<Userlogin></Userlogin>} />
+          <Route path='usermanagement/signup' element={<UserRegistor></UserRegistor>} />
+          <Route path='usermanagement/signup/login' element={<Userlogin></Userlogin>} />
+          <Route path='usermanagement/dashboard' element={<Applandingpage></Applandingpage>}>
+            <Route path='' element={<Userdashboard></Userdashboard>} />
+            <Route path='contact' element={<Contact></Contact>} />
+            <Route path='product' element={<Product></Product>} />
+            <Route path='graph' element={<Graph></Graph>} />
+            <Route path='redux' element={<ReduxWebPage></ReduxWebPage>} />
+            <Route path='product/details/:id' element={<Productdetails></Productdetails>} />
+
+            <Route path='*' element={<Apperror />}></Route>
+          </Route>
 
           <Route path='*' element={<Apperror />}></Route>
-        </Route>
-
-        <Route path='*' element={<Apperror />}></Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
