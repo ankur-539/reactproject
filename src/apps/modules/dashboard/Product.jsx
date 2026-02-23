@@ -103,19 +103,19 @@ function Product() {
           if (d.price <= 50) {
             return (
               <div className="col-md-3" key={d.id}>
-                <Link to={"details/" + d.id} className='text-decoration-none'>
+                <div className='text-decoration-none'>
                   <div className="card mt-4 border-0 shadow abc1 bg-light bg-gradient">
                     <span className="badge text-bg-info position-absolute poss blink">Top Pics</span>
-                    <img src={d.thumbnail} className="card-img-top imggg" alt="..." />
+                    <Link to={"details/" + d.id}><img src={d.thumbnail} className="card-img-top imggg" alt="..." /></Link>
                     <div className="card-body bg-white rounded-bottom">
                       <h5 className="card-title fw-bold">{d.title}</h5>
                       <p className="card-text"><b>Category : </b>{d.category}</p>
                       <p className="card-text"><b>Price : </b>{d.price}₹</p>
                       <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
-                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={()=>dispatch(cart())}>Add to cart</button>
+                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={() => dispatch(cart())}>Add to cart</button>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             )
           }
@@ -131,7 +131,7 @@ function Product() {
                       <p className="card-text"><b>Category : </b>{d.category}</p>
                       <p className="card-text"><b>Price : </b>{d.price}₹</p>
                       <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
-                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={()=>dispatch(cart())}>Add to cart</button>
+                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={() => dispatch(cart())}>Add to cart</button>
                     </div>
                   </div>
                 </Link>
@@ -151,7 +151,7 @@ function Product() {
                       <p className="card-text"><b>Category : </b>{d.category}</p>
                       <p className="card-text"><b>Price : </b>{d.price}₹</p>
                       <h5>{d.availabilityStatus} : <span className="badge text-bg-secondary">{d.stock}</span></h5>
-                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={()=>dispatch(cart())}>Add to cart</button>
+                      <button type="button" className="btn btn-warning w-100 mt-3" onClick={() => dispatch(cart())}>Add to cart</button>
                     </div>
                   </div>
                 </Link>
