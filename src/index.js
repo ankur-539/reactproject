@@ -16,8 +16,8 @@ import Product from './apps/modules/dashboard/Product';
 import Productdetails from './apps/modules/dashboard/Productdetails';
 import Graph from './apps/modules/dashboard/Graph';
 import { Provider } from 'react-redux';
-import { redStore } from './apps/modules/redux/ReduxStore';
-import ReduxWebPage from './apps/modules/redux/ReduxWebPage'
+import redStore from '../src/apps/modules/redux/ReduxStore';
+import ReduxWebPage from '../src/apps/modules/redux/ReduxWebPage'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
