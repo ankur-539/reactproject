@@ -6,7 +6,7 @@ import { FaListAlt } from "react-icons/fa";
 import { TbCards } from "react-icons/tb";
 import { FaCartShopping } from "react-icons/fa6";
 import { useDispatch, useSelector } from 'react-redux';
-import { cart } from "d:/Materials/reactproject/src/apps/modules/redux/ReduxFunctions";
+import { cart } from '../redux/ReduxFunctions';
 
 function Product() {
 

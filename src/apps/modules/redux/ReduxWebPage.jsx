@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { increaseAge, decrementAge } from './ReduxFunctions';
+import { increaseAge,decrementAge } from '../redux/ReduxFunctions';
 
 
 function ReduxWebPage() {
