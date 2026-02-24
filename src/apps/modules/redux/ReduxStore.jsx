@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import customSlicer from "./ReduxFunctions"
+import customSlicer from "../redux/ReduxFunctions"
 
 const redStore = configureStore({
     reducer: {
