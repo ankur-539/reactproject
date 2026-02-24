@@ -7,7 +7,7 @@ const initialState = {
   course: "bca",
 }
 
-const customSlicer = createSlice({
+export const customSlicer = createSlice({
   name: "ankur",
   initialState,
   reducers: {
