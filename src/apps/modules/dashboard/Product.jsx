@@ -89,9 +89,9 @@ function Product() {
           <span className="badge bg-light text-black me-2 fs-5" onClick={() => setStructure("table")}><FaTable /></span>
           <span className="badge bg-light text-black me-2 fs-5" onClick={() => setStructure("list")}><FaListAlt /></span>
           {/* <span className="badge bg-light text-black me-2 fs-5"><FaCartShopping /></span> */}
-          <button type="button" class="btn mb-1 bg-light position-relative">
+          <button type="button" className="btn mb-1 bg-light position-relative">
             <FaCartShopping className='fs-5' />
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               {addToCart}
             </span>
           </button>

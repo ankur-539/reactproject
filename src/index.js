@@ -12,12 +12,12 @@ import Applandingpage from './apps/modules/dashboard/Applandingpage';
 import Apperror from './apps/modules/sharecomponents/Apperror';
 import Userdashboard from './apps/modules/dashboard/Userdashboard';
 import Contact from './apps/modules/dashboard/Contact';
-import ReduxWebPage from './apps/modules/redux/ReduxWebPage';
 import Product from './apps/modules/dashboard/Product';
 import Productdetails from './apps/modules/dashboard/Productdetails';
 import Graph from './apps/modules/dashboard/Graph';
 import { Provider } from 'react-redux';
 import { redStore } from './apps/modules/redux/ReduxStore';
+import ReduxWebPage from './apps/modules/redux/ReduxWebPage'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

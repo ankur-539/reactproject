@@ -17,4 +17,4 @@ function ReduxWebPage() {
   )
 }
 
-export default ReduxWebPage
+export default ReduxWebPage;
