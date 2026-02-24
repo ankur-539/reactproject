@@ -13,6 +13,8 @@ function ReduxWebPage() {
       <h2>Age:{data}</h2>
       <button className='btn btn-warning me-3'onClick={()=>dispatch(increaseAge())}>increment</button>
       <button className='btn btn-warning' onClick={()=>dispatch(decrementAge())}>decrement</button>
+      
+      
     </div>
   )
 }
