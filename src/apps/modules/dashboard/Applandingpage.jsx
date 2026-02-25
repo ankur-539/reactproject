@@ -19,9 +19,6 @@ import { VscGraph } from "react-icons/vsc";
 import { SlCalender } from "react-icons/sl";
 import { FaTable } from "react-icons/fa";
 
-
-
-
 function Applandingpage() {
 
   const searchRef = useRef(null);
@@ -30,7 +27,6 @@ function Applandingpage() {
   }
 
   const userinfo = JSON.parse(localStorage.getItem("logininfo"));
-
 
   return (
     <div className="container-fluid overflow-hidden fm">

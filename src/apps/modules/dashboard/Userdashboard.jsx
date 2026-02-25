@@ -8,23 +8,22 @@ import AdminTable from "./AdminTable";
 import ModeratorTable from "./ModeratorTable";
 import UserTable from "./UserTable";
 
-
 function Userdashboard() {
 
-    const [user,setUser] = useState([]);
-    const [admin,setAdmin] = useState([]);
-    const [moderator,setModerator] = useState([]);
+    const [user, setUser] = useState([]);
+    const [admin, setAdmin] = useState([]);
+    const [moderator, setModerator] = useState([]);
     const userapi = () => {
         axios.get("https://dummyjson.com/users?limit=30").then((e) => {
             console.log(e.data.users);
 
-            setAdmin(e.data.users.filter((x)=>{
+            setAdmin(e.data.users.filter((x) => {
                 return x.role === "admin"
             }))
-            setUser(e.data.users.filter((x)=>{
+            setUser(e.data.users.filter((x) => {
                 return x.role === "user"
             }))
-            setModerator(e.data.users.filter((x)=>{
+            setModerator(e.data.users.filter((x) => {
                 return x.role === "moderator"
             }))
 
@@ -81,4 +80,3 @@ function Userdashboard() {
 }
 
 export default Userdashboard;
-
