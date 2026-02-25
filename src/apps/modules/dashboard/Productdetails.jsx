@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { TbTruckReturn } from "react-icons/tb";
+import { useDispatch} from 'react-redux';
+import { cart } from '../redux/ReduxFunctions';
 
 
 function Productdetails() {
@@ -24,6 +26,7 @@ function Productdetails() {
     const abc = (e) => {
         newQntt(e.target.value);
     }
+    const dispatch = useDispatch();
 
     return (
 
@@ -74,7 +77,7 @@ function Productdetails() {
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button type="button" className="btn btn-warning w-100 mt-3">Add to cart</button>
+                            <button type="button" className="btn btn-warning w-100 mt-3 action-1" onClick={() => dispatch(cart())}>Add to cart</button>
                             <button type="button" className="btn btn-danger w-100 mt-3">Buy now</button>
                         </div>
                     </div>

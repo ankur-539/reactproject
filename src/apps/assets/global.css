@@ -112,7 +112,7 @@
 }
 
  .hight-1{
-    height: 84vh;
+    height: 84vh !important;
 }
 
 .hight-2 {
@@ -242,6 +242,12 @@
 .action:active {
     scale: 1.1;
 }
+.action-1{
+    transition: 0.3s ease;
+}
+.action-1:active{
+    scale: 0.95;
+}
 
 .h-w {
     height: 100%;
@@ -280,4 +286,19 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;              
+}
+
+.css-1pv2de5-MuiDayCalendar-weekContainer,.css-1rl1vrc-MuiDayCalendar-header{
+    justify-content: space-evenly !important;
+    margin-bottom: 40px !important;
+}
+.css-5wchs2-MuiDateCalendar-root{
+    height: 100% !important;
+    max-height: 100% !important;
+}
+.css-1n1xn3x-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition{
+    min-height: 500px !important;
+}
+.css-1nxbkmn-MuiPickersCalendarHeader-root{
+    margin-bottom: 40px !important;
 }
