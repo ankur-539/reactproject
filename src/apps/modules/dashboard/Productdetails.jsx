@@ -70,7 +70,7 @@ function Productdetails() {
                     <div className="card" >
                         <div className="card-body">
                             <h2 className="card-title">₹{item.price * qntt}</h2>
-                            <select className="form-select mt-4" aria-label="Default select example" value={qntt} onChange={abc}>
+                            <select className="form-select mt-4" defaultValue="6" aria-label="Default select example" value={qntt} onChange={abc}>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

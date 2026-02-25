@@ -7,9 +7,9 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 function Calender() {
     return (
         <div className='row'>
-            <div className="col-sm-12 hight-1">
+            <div className="col-sm-12 hight-1 g-0">
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DateCalendar className='border bg-white bg-opacity-75  w-100 ' />
+                    <DateCalendar className='border bg-white   w-100 ' />
                 </LocalizationProvider>
             </div>
         </div>

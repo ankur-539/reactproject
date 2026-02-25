@@ -21,6 +21,7 @@ import redStore from '../src/apps/modules/redux/ReduxStore';
 import Loader from './apps/modules/dashboard/Loader';
 import ReduxWebPage from '../src/apps/modules/redux/ReduxWebPage';
 import Calender from './apps/modules/dashboard/Calender';
+import PaginationTable from './apps/modules/dashboard/Table';
 const Product = lazy(() => import('./apps/modules/dashboard/Product'));
 const Userdashboard = lazy(() => import('./apps/modules/dashboard/Userdashboard'));
 
@@ -51,6 +52,7 @@ root.render(
             <Route path='redux' element={<ReduxWebPage></ReduxWebPage>} />
             <Route path='product/details/:id' element={<Productdetails></Productdetails>} />
             <Route path='calender' element={<Calender></Calender>} />
+            <Route path='table' element={<PaginationTable></PaginationTable>} />
 
             <Route path='*' element={<Apperror />}></Route>
           </Route>

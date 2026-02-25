@@ -17,6 +17,7 @@ import { ToastContainer } from "react-toastify";
 import { useRef } from "react";
 import { VscGraph } from "react-icons/vsc";
 import { SlCalender } from "react-icons/sl";
+import { FaTable } from "react-icons/fa";
 
 
 
@@ -46,6 +47,7 @@ function Applandingpage() {
             <Link to={"graph"} className="text-white"><VscGraph></VscGraph></Link>
             <Link to={"redux"} className="text-white"><FaChartPie></FaChartPie></Link>
             <Link to={"calender"} className="text-white"><SlCalender></SlCalender></Link>
+            <Link to={"table"} className="text-white"><FaTable></FaTable></Link>
             <Link to={"setting"} className="text-white mt-auto mb-2 fs-5"><AiFillSetting></AiFillSetting></Link>
           </div>
 
@@ -60,6 +62,7 @@ function Applandingpage() {
               <Link to={"graph"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Graph</Link>
               <Link to={"redux"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Redux</Link>
               <Link to={"calender"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">Calender</Link>
+              <Link to={"table"} className="m-0 py-1 text-decoration-none fw-bold fm text-light abc">PaginationTable</Link>
               <Link to={"addnew"} type="button" className="btn btn-outline-light m-0 mt-auto">
                 + add new entry
               </Link>
