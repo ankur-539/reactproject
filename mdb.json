@@ -206,6 +206,24 @@
       "userphone": "6767676767",
       "pass": "jdj@8J9Aa1",
       "profileurl": "https://divakar"
+    },
+    {
+      "id": "bfc1",
+      "username": "manav",
+      "dob": "2026-02-12",
+      "emailid": "manav@gmail.com",
+      "userphone": "4578586844",
+      "pass": "Manav@123",
+      "profileurl": "https://manav"
+    },
+    {
+      "id": "c4c0",
+      "username": "Ankur",
+      "dob": "2026-04-23",
+      "emailid": "ankur@gmail.com",
+      "userphone": "6767676767",
+      "pass": "hghgh@223A",
+      "profileurl": "https://loading.io/background/m-wave/"
     }
   ],
   "sales": [

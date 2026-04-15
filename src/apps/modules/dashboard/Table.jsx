@@ -58,4 +58,4 @@ function PaginationTable() {
     )
 }
 
-export default PaginationTable
+export default PaginationTable;
